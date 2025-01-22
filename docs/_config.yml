@@ -19,15 +19,35 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Los Juguetes Hermanos
-email: your-email@example.com
+email: chvargasp@unal.edu.co
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+  Versión preliminar de la web para el proyecto Los Juguetes Hermanos
+# _config.yml
+
+# Navigation header
+nav:
+  - title: "Planeación de proyecto"
+    url: "/planeacion-de-proyecto"
+  - title: "Gestión de producción y automatización"
+    url: "/gestion-de-produccion-y-automatizacion"
+  - title: "Industria 4.0 en la automatización"
+    url: "/industria-4-0-en-la-automatizacion"
+  - title: "Evaluación económica del proyecto"
+    url: "/evaluacion-economica-del-proyecto"
+  - title: "Celda de manufactura robotizada"
+    url: "/celda-de-manufactura-robotizada"
+  - title: "Fábrica digital"
+    url: "/fabrica-digital"
+  - title: "Controladores Industriales"
+    url: "/controladores-industriales"
+  - title: "SCADA"
+    url: "/scada"
+
+
+
+#baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cvarper.github.io/Los-Juguetes-Hermanos/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  CVarPer
 
 # Build settings
 theme: minima

@@ -1,75 +1,39 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+# which you are expected to set up once and rarely edit after that.
+# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
+# If you change this file, please restart the server process.
+
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
+# are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Los Juguetes Hermanos
-email: chvargasp@unal.edu.co
-description: >- # this means to ignore newlines until "baseurl:"
-  Versión preliminar de la web para el proyecto Los Juguetes Hermanos
-# _config.yml
+theme: jekyll-agency
 
-# Navigation header
-nav:
-  - title: "Planeación de proyecto"
-    url: "/planeacion-de-proyecto"
-  - title: "Gestión de producción y automatización"
-    url: "/gestion-de-produccion-y-automatizacion"
-  - title: "Industria 4.0 en la automatización"
-    url: "/industria-4-0-en-la-automatizacion"
-  - title: "Evaluación económica del proyecto"
-    url: "/evaluacion-economica-del-proyecto"
-  - title: "Celda de manufactura robotizada"
-    url: "/celda-de-manufactura-robotizada"
-  - title: "Fábrica digital"
-    url: "/fabrica-digital"
-  - title: "Controladores Industriales"
-    url: "/controladores-industriales"
-  - title: "SCADA"
-    url: "/scada"
+url    : "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 
+title      : Los Juguetes hermanos
+email      : your-email@example.com #this is also the email contact forms will go to
+description: "En este sitio web se recopila el material de desarrollo del proyecto"
+author     : Christian Vargas, Marcos Fierro, David Ricaurte
+# logo:     #optional, defaults to site title
+  # path: assets\img\clients\creative-market.jpg
+  # height: 60 #height in px, defaults to 52px
 
+locale: "en-US" # See available languages in _data/sitetext.yml
 
-#baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cvarper.github.io/Los-Juguetes-Hermanos/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  CVarPer
+analytics:
+  google: #Google Analytics tracking code here
 
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+collections:
+  portfolio:
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+markdown: kramdown
+
+# Uncomment following line to use Formspree form ID based URL instead of email based URL
+# Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
+# formspree_form_path: "f/a_form_id"

@@ -1,0 +1,125 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "en-US"  [YOUR PREFERRED LOCALE]
+#
+# How to use:
+# {{ site.data.navigation[site.locale].nav.<var_name> | default: 'text' }}
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+  nav:
+    - title: "Services"
+      section: services
+    - title: "Portfolio"
+      section: portfolio
+    - title: "About"
+      section: about
+    - title: "Team"
+      section: team
+    - title: "Theme Source"
+      url: https://github.com/raviriley/agency-jekyll-theme/
+  dropdown_nav:
+    - title: "Planeación de proyecto"
+      section: 01Plan
+    - title: "Gestión de producción y automatización"
+      section: 02Gestion
+    - title: "Industria 4.0 en la automatización"
+      section: 03Industria
+    - title: "Evaluación económica del proyecto"
+      section: 04Evaluacion
+    - title: "Celda de manufactura robotizada"
+      section: 05Celdas
+    - title: "Fábrica digital"
+      section: 06Fabrica
+    - title: "Controladores Industriales"
+      section: 07Controladores
+    - title: "SCADA"
+      section: 08SCADA
+      
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN
+
+# Spanish
+# -------
+es: &DEFAULT_ES
+  nav:
+    - title: "Servicios"
+      section: servicios
+    - title: "Portafolio"
+      section: portafolio
+    - title: "Sobre Nosotros"
+      section: nosotros
+    - title: "Cronología"
+      section: cronologia
+      dropdown_nav:
+      - title: "Planeación de proyecto"
+        section: 01Plan
+      - title: "Gestión de producción y automatización"
+        section: 02Gestion
+      - title: "Industria 4.0 en la automatización"
+        section: 03Industria
+      - title: "Evaluación económica del proyecto"
+        section: 04Evaluacion
+      - title: "Celda de manufactura robotizada"
+        section: 05Celdas
+      - title: "Fábrica digital"
+        section: 06Fabrica
+      - title: "Controladores Industriales"
+        section: 07Controladores
+      - title: "SCADA"
+        section: 08SCADA
+    - title: "Equipo"
+      section: equipo
+    - title: "Fuente de la plantilla"
+      url: https://github.com/raviriley/agency-jekyll-theme/
+es-ES:
+  <<: *DEFAULT_ES
+es-CO:
+  <<: *DEFAULT_ES
+
+# Deutsch
+# -----------------
+de: &DEFAULT_DE
+  nav:
+    - title: "Leistungen"
+      section: Leistungen
+    - title: "Portfolio"
+      section: Portfolio
+    - title: "Über uns"
+      section: Ueber
+    - title: "Geschichte"
+      section: Geschichte
+    - title: "Team"
+      section: Team
+    - title: "Kontakt"
+      section: Kontakt
+      submenu:
+      - title: "Planeación de proyecto"
+        section: 01Plan
+      - title: "Gestión de producción y automatización"
+        section: 02Gestion
+      - title: "Industria 4.0 en la automatización"
+        section: 03Industria
+      - title: "Evaluación económica del proyecto"
+        section: 04Evaluacion
+      - title: "Celda de manufactura robotizada"
+        section: 05Celdas
+      - title: "Fábrica digital"
+        section: 06Fabrica
+      - title: "Controladores Industriales"
+        section: 07Controladores
+      - title: "SCADA"
+        section: 08SCADA
+    - title: "Quellcode des Themas"
+      url: https://github.com/raviriley/agency-jekyll-theme/
+de-DE:
+  <<: *DEFAULT_DE

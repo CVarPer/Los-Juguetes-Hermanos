@@ -6,6 +6,51 @@
 **Fecha:** 27 de noviembre de 2024
 
 
+![file](https://github.com/user-attachments/assets/6f6dba6a-8798-49a9-a980-844bcdee794f)
+
+# **Proceso de Aprendizaje**
+
+## **Gestión de Proyecto (Redacción Grupal)**
+Reflexión sobre cómo se gestionó el proyecto a nivel grupal. Se pueden incluir experiencias positivas y áreas de mejora en los siguientes aspectos:
+
+### **Dinámica de las reuniones**
+- Frecuencia y duración de las reuniones.
+- Estructura y efectividad de las reuniones.
+- Participación y compromiso de los integrantes.
+
+### ** Manejo de tiempos y recursos**
+- Planificación y seguimiento del cronograma.
+- Uso de herramientas de gestión de tareas.
+- Dificultades y soluciones encontradas para cumplir con los plazos.
+
+### **Discusiones y verificación de avance del proyecto**
+- Cómo se tomaron decisiones dentro del equipo.
+- Métodos para asegurar la calidad y avance del trabajo.
+- Evaluación de hitos cumplidos.
+
+### ** Interacción con el equipo docente facilitador**
+- Nivel de apoyo recibido del equipo docente.
+- Efectividad de la retroalimentación proporcionada.
+- Oportunidades de mejora en la comunicación con los docentes.
+
+---
+
+## **Trabajo Colaborativo (Redacción Grupal)**
+Evaluación de la dinámica de trabajo en equipo y el nivel de colaboración dentro del grupo.
+
+### **Roles de los participantes**
+- Distribución de responsabilidades dentro del equipo.
+- Flexibilidad y adaptación de los roles según necesidades del proyecto.
+
+### **Evidencias de trabajo en equipo**
+- Ejemplos de tareas realizadas en conjunto.
+- Documentación de herramientas utilizadas para la colaboración (Trello, Google Docs, etc.).
+
+### **Análisis de la colaboración**
+- Evaluación del nivel de compromiso y responsabilidad de cada integrante.
+- Factores que facilitaron o dificultaron la cooperación.
+- Relación con el equipo docente y cómo influyó en el trabajo grupal.
+
 
 # Celda Robotizada y Gestión de Producción: Los Juguetes Hermanos
 
@@ -85,6 +130,81 @@ A continuaciòn se consignan los MTTR para cada proceso:
 | Empaque Individual      | 90%               | 1:00             |
 | Empaque por Lotes       | 95%               | 1:00             |
 
+
+
+
+
+## Integraciòn de sistema MES a Los Juguetes Hermanos
+
+### Adquisición de Datos en la Planta
+
+Para optimizar la producción y trazabilidad, se implementará un sistema de adquisición de datos en tiempo real que integrará sensores, PLCs y dispositivos IoT en cada etapa del proceso:
+
+- **Inyección (Gestionada por el IRB 6700)**
+  - Sensores de presión y temperatura en la inyectora.
+  - Contadores de ciclos de moldeo y tiempo de inactividad.
+  - Comunicación OPC UA con el MES.
+
+- **Desbarbado Criogénico:**
+  - Monitoreo de temperatura en la cámara de congelación de la màquina.
+  - Registro de tiempos de exposición por lote.
+  - Control de consumo de nitrógeno líquido.
+
+- **Lijado y Ensamblaje:**
+  - Escaneo de códigos de barras o RFID al inicio y fin de cada tarea.
+  - Registro de tiempos operativos mediante tablets IoT.
+  - Inspección visual con visión artificial en puntos clave.
+
+- **Empacado individual y por lotes:**
+  - Pesaje de productos terminados para control de calidad.
+  - Registro de lotes mediante código QR.
+
+---
+
+### Infraestructura de Control y Comunicación
+
+Para garantizar la integración fluida entre la planta y el MES, se utilizará una arquitectura basada en:
+
+- **PLCs industriales conectados a un SCADA**, con almacenamiento en bases de datos SQL.
+- **Middleware basado en Node-RED o Kepware**, actuando como puente con el MES.
+- **Protocolos de comunicación estandarizados**: OPC UA, MQTT y REST API.
+
+El sistema permitirá monitoreo en tiempo real, alertas automáticas y acceso remoto a la información de producción.
+
+---
+
+### Implementación y Desarrollo
+
+La integración con el MES se realizará en **etapas** distribuidas a lo largo de 8 meses para minimizar interrupciones en la producción:
+
+1. **Configuración de Sensores y PLCs (Meses 1-3)**
+   - Instalación y calibración de sensores en inyectoras y cámaras criogénicas.
+   - Desarrollo del sistema de registro en lijado y ensamblaje.
+
+2. **Desarrollo de Middleware y Conexión con MES (Meses 4-6)**
+   - Creación de APIs para transmisión de datos.
+   - Configuración de dashboards de productividad y calidad.
+
+3. **Optimización y Validación (Meses 7-8)**
+   - Pruebas de precisión de datos y ajuste de alarmas.
+   - Capacitación del personal en el uso del sistema.
+
+---
+
+### Valor Agregado y Beneficios Esperados
+
+- **Aumento del OEE** obteniedo datos de eficiencia, disponibilidad y calidad, nos permite identificar cuellos de botella y àreas de mejora en nuestro proceso.
+
+- **Reducciòn de tiempos de inactividad** porque podemos anticipar posibles fallas y programar mantenimientos preventivos que puedan detener completamente el proceso de producciòn.
+
+- **Trazabilidad total** desde la recepciòn del material hasta el empaque.
+
+- **Ajuste en tiempo real de la producciòn** para controlar en tiempo real cuantas unidades queremos producir de cada juguete.
+
+-**Toma de decisiones** basadas eb inbfromaciòn precisa y actualizada sobre el rendimiento de la producciòn, ademàs de poder generar informes y anàlisis de detallas sobre la prioducciòn, identificando tendencias y patrones que permiten mejorar la eficiencia.
+
+
+- **Cumplimiento normativo** puesto que el MES podrà permitir la documentaciòn y trazabilidad de los procesos, lo que asegura el cumplimiento de las normas de seguridad, dadp que el cumplimiento de estas es primordial para el uso de los juguetes por los niños.
 
 ---
 

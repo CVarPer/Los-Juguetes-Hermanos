@@ -605,6 +605,9 @@ Contiene el desglose de los componentes y partes necesarias para la fabricación
 Esto ayuda a gestionar el inventario de insumos y prever costos de producción, evitando desperdicios y sobrecostos.
 
 
+### Propuesta Implementación Industria 4.0
+
+![Arquitectura de Conexiones](Figuras/Conexiones.png)
 
 
 

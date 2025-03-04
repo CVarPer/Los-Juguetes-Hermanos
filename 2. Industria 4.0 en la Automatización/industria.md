@@ -23,15 +23,7 @@ A continuación, se describen las tecnologías empleadas en esta propuesta:
 
 
 
-### SCADA e Integración de Datos
 
-El sistema SCADA basado en Ignition permite la supervisión y control de procesos industriales a través de una interfaz gráfica en tiempo real. Algunas de sus funcionalidades clave incluyen:
-
-- Monitoreo remoto de variables del proceso.
-- Registro y análisis de datos históricos.
-- Configuración de alarmas y notificaciones para eventos críticos.
-- Integración con bases de datos SQL para almacenamiento y análisis de datos.
-- Paneles de visualización personalizables con indicadores clave de rendimiento (KPIs).
 
 ### Lógica de Programación del PLC
 

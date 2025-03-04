@@ -196,8 +196,22 @@ El proceso actual de la empresa presenta el siguiente Value Stream Mapping:
 
 ![image](https://github.com/user-attachments/assets/3715923b-83b5-4056-9ce9-cce61668e519)
 
+Entre los problemas que presenta esta distribución se encuentran:
+
+- **Excesivos tiempos de transporte:** Hay varios bloques de transporte con valores de 5 minutos hasta 10 minutos, lo que nos indica que es una zona con potencial de mejora.
+
+-**Cuellos de botella:** Hya notables diferencias entre algunos procesos dentro de la cadena de producción, por ejemplo, el tiempo de empacado y la fundición es bastante grande considerando que la mayoría de procesos dura menos de 3 minutos. 
+
+-**Acumulación de materia prima:** Al usar lotes en el sistema de producción, esto conlleva a acumulación de materia prima y de producto en proceso, se puede evidenciar por ejmeplo que se acumulan 2 lotes antes de poder ejecutar el proceso de empacado.
+
+-**Elevados tiempos de configuración:** Por ejemplo en la inyección de plásticos se nota un timepo de ciclo de 3 minutos a comparación de su tiempo de preparación de 15 muinutos, al igual que el empacado, puesto que este se prepara durante 10 minutos antes de operar por 15 minutos.
 
 
+Por otro lado, este es el VSM correspondiente al proceso mejorado de la planta:
+
+![image](https://github.com/user-attachments/assets/5ab98fe0-0e33-49c8-b955-2e0eb3fc23f2)
+
+En este VSM se evidencia que los tiempos de ciclo son relativamente bajos en la mayoría de procesos, además de conservar ordenes de magnitud similares, además de presentar un buen porcentaje de disponibilidad en todos los procesos, siendo mayor al 85%
 
 
 ## Integración de sistema MES a Los Juguetes Hermanos

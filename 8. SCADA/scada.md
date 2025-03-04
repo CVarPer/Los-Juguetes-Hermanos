@@ -17,3 +17,5 @@ El SCADA se comunica con el PLC a través de RSLINX, utilizando OPC como protoco
 ![Interfaz SCADA](./Figuras/scada.jpg)
 
 La interfaz HMI del SCADA incluye la visualización del estado de activación de las diferentes estaciones, asi como el accionamiento de las bandas transportadoras. Tambien se pueden registrar algunas alarmas, por ejemplo del nivel de la tolva de la inyectora de plastico.
+
+[Video funcionamiento SCADA](https://youtu.be/lZBCA-plMxM)

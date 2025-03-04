@@ -1,49 +1,36 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Build and Deploy Jekyll Site
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Use an Ubuntu runner
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Configure Git Safe Directory
+        run: git config --global --add safe.directory /github/workspace
 
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          # Point to the folder that contains your Jekyll site (docs)
-          source: ./docs
-          # Output the built site to _site (this folder will be uploaded as an artifact)
-          destination: ./_site
+          ruby-version: '3.1'  # Use a Ruby version that meets your gemspec requirements
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+      - name: Install dependencies
+        run: bundle install
+        # If your Gemfile is not in the root, add working-directory: ./docs (or your path)
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
+      - name: Build site
+        run: bundle exec jekyll build
+        # Adjust working-directory if needed
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_site  # or the folder where your built site is located

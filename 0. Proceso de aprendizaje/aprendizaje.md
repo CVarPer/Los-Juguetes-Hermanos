@@ -20,7 +20,7 @@ El equipo docente de la asignatura siempre estuvo disponible para resolver dudas
 
 ### Roles de los participantes
 
-- **Cristian Pérez**: Encargado de llevar la fábrica a la Industria 4.0 y del Digital Factory.
+- **Christian Vargas**: Encargado de llevar la fábrica a la Industria 4.0 y del Digital Factory.
 - **David Ricaurte**: Responsable de la evaluación económica del proyecto, además de profundizar en las áreas de SCADA y PLCs.
 - **Marcos Fierro**: Encargado de la virtualización de la fábrica, la gerencia y gestión de la automatización de la fábrica, y el diseño de la celda robotizada.
 

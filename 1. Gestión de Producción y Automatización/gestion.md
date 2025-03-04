@@ -17,16 +17,92 @@ El siguiente esquema representa la **distribución actual** de la planta de prod
 - **Alto consumo energético** debido a la operación simultánea de múltiples inyectoras con baja ocupación.
 - **Tiempos de espera prolongados**, afectando la eficiencia global del sistema.
 
-A continuación, se presentan los niveles de **ocupación de los equipos** en cada línea de producción:
+A continuación, se presenta el desempeño en cada línea de producción:
 
 #### Línea Propulser  
 ![4f70c97a-721c-4164-8102-7e4546284dd6](https://github.com/user-attachments/assets/756f2518-0811-4d79-a455-df19b27415b9)
 
+**Información General**
+
+| UNIDADES | T. DISPONIBLE | T. OPTVO | CALIDAD |
+|----------|--------------|----------|---------|
+| 17       | 28800        | 28644    | 0,93    |
+
+
+
+**Procesos: Propulser**
+
+| PROCESO   | REGISTRO | INYECCIÓN | M. CHASIS | M. MOTOR | M. VIDRIOS | CALIDAD | DESPACHO |
+|-----------|---------|-----------|-----------|----------|------------|---------|----------|
+| **T. DE CICLO** | 300 | 30 | 5 | 180 | 120 | 10 | 10 |
+| **T. DISPONIBLE** | 23040 | 18720 | 27360 | 27360 | 27360 | 24480 | 27360 |
+| **DISPONIBILIDAD** | 0,8 | 0,65 | 0,95 | 0,95 | 0,95 | 0,85 | 0,95 |
+
+
+
+**Métricas Finales**
+
+| DISPONIBILIDAD | EFICIENCIA | FFT  |
+|---------------|-----------|------|
+| 0,8833        | 0,3615    | 0,93 |
+
+Esto deja a la línea con un desastroso OEE de 29%.
+
 #### Línea Qammar  
 ![d6e40a6b-5a24-42c7-9a7f-2d20f706c214](https://github.com/user-attachments/assets/100794fd-9ea0-4609-8bc1-84bdcd18393f)
 
+**Información General**
+
+| UNIDADES | T. DISPONIBLE | T. OPTVO | CALIDAD |
+|----------|--------------|----------|---------|
+| 22       | 28800        | 28644    | 0,95    |
+
+**Procesos: Qammar**
+
+| PROCESO   | REGISTRO | CORTE | CALIDAD 1 | PINTURADO | ENSAMBLE | CALIDAD 2 | E. INDIVIDUAL |
+|-----------|---------|-------|-----------|-----------|---------|-----------|--------------|
+| **T. DE CICLO** | 10 | 10 | 10 | 60 | 10 | 10 | 210 |
+| **T. DISPONIBLE** | 25920 | 23040 | 25920 | 24480 | 21600 | 24480 | 25920 |
+| **DISPONIBILIDAD** | 0,90 | 0,80 | 0,90 | 0,85 | 0,75 | 0,85 | 0,90 |
+
+**Métricas Finales**
+
+| DISPONIBILIDAD | EFICIENCIA | FFT  |
+|---------------|-----------|------|
+| 0,85         | 0,2335    | 0,95 |
+
+Con ello se calcula que esta línea de producción tiene un OEE del 18%.
+
+
 #### Línea TDB (Trompo de Batalla)  
 ![9af76e86-e705-44e6-9545-35b027ffd6d8](https://github.com/user-attachments/assets/0b687d7e-c53a-4df3-a2c2-3234b70452f4)
+
+**Información General**
+
+| UNIDADES | T. DISPONIBLE | T. OPTVO | CALIDAD |
+|----------|--------------|----------|---------|
+| 232      | 28800        | 28644    | 0,85    |
+
+**Procesos: TDB**
+
+| PROCESO   | REGISTRO | INYECCIÓN | FUNDICIÓN | TROQUELADO | PINTURADO | ENSAMBLAJE | CALIDAD | DESPACHO |
+|-----------|---------|-----------|-----------|------------|----------|------------|---------|----------|
+| **T. DE CICLO** | 10 | 3 | 5 | 1 | 2 | 10 | 5 | 15 |
+| **T. DISPONIBLE** | 23040 | 24480 | 27360 | 27936 | 24480 | 20160 | 25920 | 24480 |
+| **DISPONIBILIDAD** | 0,8 | 0,85 | 0,95 | 0,97 | 0,85 | 0,7 | 0,9 | 0,85 |
+
+**Métricas Finales**
+
+| DISPONIBILIDAD | EFICIENCIA | FFT  |
+|---------------|-----------|------|
+| 0,85875      | 0,3511    | 0,85 |
+
+
+Presentando un OEE de 25%.
+
+Como puede observar, gran parte del tiempo que la maquinaria estaba funcionando era consumido por las fallas de los equipos, reduciendo la productividad de los mismos.
+
+
 
 ##  Propuesta de Optimización del Layout  
 
@@ -73,6 +149,52 @@ A continuaciòn se consignan los MTTR para cada proceso:
 | Ensamblaje              | 85%               | 0:10             |
 | Empaque Individual      | 90%               | 1:00             |
 | Empaque por Lotes       | 95%               | 1:00             |
+
+
+Con estos datos es posible entonces hacer el cálculo del OEE de la planta actualizada, para ello, asuminedo que la planta va operar en dos turnos de 8 horas cada uno de lunes a viernes, y asuminedo una tasa de calidad del 95% en nuestros productos, tenemos las siguientes consideraciones par la operación diaria de la plana:
+
+
+| UNIDADES | T. DISPONIBLE | T. OPTVO | CALIDAD |
+|----------|--------------|----------|---------|
+| 640      | 57600       | 57444    | 0.95    |
+
+
+Ahora, consignando la información de forma más precisa sobre cada etapa del proceso de producción, estos datos nos permitirán calcular el OEE de la fábrica más adelante:
+
+| PROCESO      | REGISTRO | INYECCIÓN | LIJADO | DESBARBADO | PINTADO | ENSAMBLAJE | E. INDIVIDUAL | E. LOTES |
+|-------------|---------|-----------|--------|------------|---------|------------|--------------|---------|
+| **T. DE CICLO (s)** | 10  | 11        | 90     | 60         | 80      | 180        | 21           | 210     |
+| **T. DISPONIBLE (s)** | 51840 | 54720     | 51840  | 54720      | 54720   | 48960      | 51840        | 54720   |
+| **DISPONIBILIDAD** | 0.90 | 0.95      | 0.90   | 0.95       | 0.95    | 0.85       | 0.90         | 0.95    |
+
+Con las siguientes ecuaciones:
+
+![image](https://github.com/user-attachments/assets/257c9de8-171f-490b-b41b-4e3093b749f4)
+
+![image](https://github.com/user-attachments/assets/7d1bdea3-95be-4e48-834b-da892a2c82b0)
+
+![image](https://github.com/user-attachments/assets/5dfb9163-9b41-46dc-9f4c-175b50f9740b)
+
+Reemplazando los datos de la tabla de consideraciones generales tenemos que:
+
+| MÉTRICA        | VALOR      |
+|---------------|------------|
+| DISPONIBILIDAD | 0.92       |
+| EFICIENCIA    | 0.875844301 |
+| FTT          | 0.95       |
+
+Con los datos de la tabla anterior, se puede hacer el cálculo del OEE de la propuesta de mejora de automatización, de esta forma, reemplazando en la ecuación:
+
+![image](https://github.com/user-attachments/assets/44626dc9-6682-4d1b-8831-335584504c41)
+
+Con ello, obtenemos que el OEE de la actualización es de 76%, lo cual es una mejora significativa partiendo de la situación inicial que tenía la empresa. Con esta distribución se alcanza una producción de 640 unidades diarias repartidas entre los juguetes del catálogo. La mayor o menor producción de uno u otro dependerá de la demanda del mercado en el momento de producción.
+
+
+## VSM del proceso actual y el mejorado:
+
+El proceso actual de la empresa presenta el siguiente Value Stream Mapping:
+
+![image](https://github.com/user-attachments/assets/3715923b-83b5-4056-9ce9-cce61668e519)
 
 
 

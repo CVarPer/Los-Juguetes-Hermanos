@@ -297,4 +297,38 @@ A partir del listado de actividades que conformarían en su totalidad el proyect
 
 Debido a las facilidades de integración entre GitHub Projects y el repositorio como entregable, se decidió crear un proyecto en esta misma plataforma. El cronograma establecido puede ser consultado en este [enlace](https://github.com/users/CVarPer/projects/3/views/2)
 
+| Fase | Actividad / Tarea                                                           | Fecha de Inicio | Fecha de Fin | Duración  | Responsable(s) | Dependencias                                     |
+|------|-----------------------------------------------------------------------------|-----------------|--------------|-----------|----------------|--------------------------------------------------|
+| 1    | **Planificación y Gestión del Proyecto**                                  |                 |              |           |                |                                                  |
+| 1    | Kickoff Meeting y Formación del Equipo                                      | 01/11/2024      | 03/11/2024   | 3 días    | Christian      | -                                                |
+| 1    | Elaboración y Validación del EDT                                            | 04/11/2024      | 07/11/2024   | 4 días    | Christian      | Kickoff Meeting                                  |
+| 1    | Creación del Cronograma y Asignación de Roles                               | 08/11/2024      | 11/11/2024   | 4 días    | Christian      | EDT                                              |
+| 1    | Planificación de Reuniones Periódicas y Seguimiento                         | 12/11/2024      | 15/11/2024   | 4 días    | Christian      | Cronograma                                     |
+| 2    | **Diseño del Producto: Selección y Modelado**                             |                 |              |           |                |                                                  |
+| 2    | Selección de juguetes a fabricar                                            | 16/11/2024      | 20/11/2024   | 5 días    | Marcos         | Fase 1 completada                                |
+| 2    | Identificación de componentes                                               | 21/11/2024      | 25/11/2024   | 5 días    | Marcos         | Selección de juguetes                            |
+| 2    | Modelado CAD - Producto 1: Propulser                                        | 26/11/2024      | 03/12/2024   | 8 días    | Christian      | Identificación de componentes                    |
+| 2    | Modelado CAD - Producto 2: Trompo de batalla                               | 04/12/2024      | 08/12/2024   | 5 días    | Christian      | Modelado Producto 1                              |
+| 2    | Modelado CAD - Producto 3: Qamar                                            | 09/12/2024      | 13/12/2024   | 5 días    | Christian      | Modelado Producto 2                              |
+| 2    | Ensamble virtual de prototipos                                              | 14/12/2024      | 15/12/2024   | 2 días    | Christian      | Modelado CAD                                   |
+| 2    | Elaboración de VSM para productos                                           | 14/12/2024      | 15/12/2024   | 2 días    | Marcos         | Ensamble virtual                                 |
+| 3    | **Evaluación Técnico-Económica**                                            |                 |              |           |                |                                                  |
+| 3    | Diseño de planta preautomatizada en Tecnomatix                              | 16/12/2024      | 22/12/2024   | 7 días    | Marcos         | Fase 2 completada                                |
+| 3    | Propuesta de automatización en Tecnomatix                                   | 23/12/2024      | 28/12/2024   | 6 días    | Marcos         | Diseño de planta preautomatizada                 |
+| 3    | Análisis de costos (Curva S) y elaboración de presupuestos                  | 29/12/2024      | 08/01/2025   | 11 días   | David          | Propuesta de automatización                      |
+| 3    | Creación de la Matriz de adquisiciones                                      | 09/01/2025      | 12/01/2025   | 4 días    | David          | Análisis de costos                               |
+| 3    | Cálculo de indicadores financieros (VPN, TIR, Payback)                      | 13/01/2025      | 20/01/2025   | 8 días    | David          | Matriz de adquisiciones                          |
+| 3    | Revisión y aprobación de resultados con stakeholders                        | 21/01/2025      | 31/01/2025   | 11 días   | David          | Cálculo de indicadores                           |
+| 4    | **Optimización del Diseño de Planta**                                     |                 |              |           |                |                                                  |
+| 4    | Ajuste de procesos y rediseño del layout de planta                          | 01/02/2025      | 07/02/2025   | 7 días    | Marcos         | Resultados de Fase 3                             |
+| 5    | **Automatización del Proceso**                                              |                 |              |           |                |                                                  |
+| 5    | Desarrollo del gemelo digital en Siemens NX                                | 08/02/2025      | 15/02/2025   | 8 días    | Christian      | Fase 4 completada                                |
+| 5    | Selección de procesos a automatizar y selección del robot                   | 16/02/2025      | 20/02/2025   | 5 días    | Marcos         | Gemelo digital                                   |
+| 5    | Diseño de la celda robotizada (incluye matriz de riesgos y seguridad)        | 21/02/2025      | 25/02/2025   | 5 días    | Marcos         | Selección de procesos                            |
+| 5    | Integración de tecnologías de Industria 4.0 (IoT, sensores, protocolos)     | 26/02/2025      | 28/02/2025   | 3 días    | David          | Diseño de celda robotizada                       |
+| 6    | **Presentación Final del Proyecto**                                       |                 |              |           |                |                                                  |
+| 6    | Elaboración del video resumen                                              | 01/03/2025      | 01/03/2025   | 1 día     | Christian      | Fase 5 completada                                |
+| 6    | Preparación de la sustentación y revisión final de entregables              | 02/03/2025      | 02/03/2025   | 1 día     | Christian      | Video resumen                                  |
+
+
 ## 3. Matriz de Adquisiciones

@@ -2,22 +2,40 @@
 
 
 ## Índice
-1. [Introducción](#introducción)
-2. [Objetivo](#objetivo)
-3. [Etapas Principales](#etapas-principales)
-   - [Identificación y Selección de la Etapa del Proceso](#identificación-y-selección-de-la-etapa-del-proceso)
-   - [Selección de Componentes de la Celda](#selección-de-componentes-de-la-celda)
-4. [Celda Robotizada: IRB 6700](#celda-robotizada-irb-6700)
-   - [LayOut de la Celda](#layout-de-la-celda)
-   - [Componentes](#componentes)
-   - [Duty Cycle y Throughput time](#duty-cycle-y-throughput-time)
-5. [Identificación de Peligros y Gestión de Riesgos](#identificación-de-peligros-y-gestión-de-riesgos)
-   - [Riesgos presentes](#riesgos-presentes)
-   - [Frecuencia y probabilidad de los peligros](#frecuencia-y-probabilidad-de-los-peligros)
-   - [Escalas de Probabilidad y Severidad](#escalas-de-probabilidad-y-severidad)
-   - [Clasificación del Nivel de Riesgo](#clasificación-del-nivel-de-riesgo)
-   - [Mitigación de los peligros](#mitigación-de-los-peligros)
-6. [Referencias](#referencias)
+- [Los Juguetes Hermanos: Automatización de Extracción de Piezas e Intercambio de Moldes](#los-juguetes-hermanos-automatización-de-extracción-de-piezas-e-intercambio-de-moldes)
+  - [Índice](#índice)
+  - [Introducción](#introducción)
+  - [Objetivo](#objetivo)
+  - [Etapas Principales](#etapas-principales)
+    - [Identificación y Selección de la Etapa del Proceso](#identificación-y-selección-de-la-etapa-del-proceso)
+      - [Etapas con Mejoras en Productividad](#etapas-con-mejoras-en-productividad)
+  - [Celda Robotizada: IRB 6700](#celda-robotizada-irb-6700)
+  - [Procedimiento de Operación](#procedimiento-de-operación)
+    - [Layout de la Celda](#layout-de-la-celda)
+    - [Componentes](#componentes)
+      - [Efectores Finales](#efectores-finales)
+    - [Duty Cycle y Throughput Time](#duty-cycle-y-throughput-time)
+- [Agregación de Valor de la Celda Robotizada](#agregación-de-valor-de-la-celda-robotizada)
+  - [Identificación de Peligros y Gestión de Riesgos](#identificación-de-peligros-y-gestión-de-riesgos)
+    - [Riesgos Presentes](#riesgos-presentes)
+    - [Medidas de Mitigación](#medidas-de-mitigación)
+  - [Frecuencia y Probabilidad de los Peligros](#frecuencia-y-probabilidad-de-los-peligros)
+    - [Evaluación de Riesgos HRN](#evaluación-de-riesgos-hrn)
+  - [Escala de Probabilidad (P)](#escala-de-probabilidad-p)
+  - [Escala de Severidad (S)](#escala-de-severidad-s)
+  - [Clasificación del Nivel de Riesgo (HRN)](#clasificación-del-nivel-de-riesgo-hrn)
+  - [Mitigación de los Peligros](#mitigación-de-los-peligros)
+    - [1. Contacto accidental con el robot](#1-contacto-accidental-con-el-robot)
+    - [2. Fallo en la función de paro de seguridad](#2-fallo-en-la-función-de-paro-de-seguridad)
+    - [3. Caída del molde](#3-caída-del-molde)
+    - [4. Colisión del robot con la inyectora](#4-colisión-del-robot-con-la-inyectora)
+    - [5. Exposición a temperaturas cambiantes y a material fundido de la inyectora](#5-exposición-a-temperaturas-cambiantes-y-a-material-fundido-de-la-inyectora)
+    - [6. Pinzamiento entre los moldes y el manipulador del robot](#6-pinzamiento-entre-los-moldes-y-el-manipulador-del-robot)
+    - [7. Fallo en el sistema de control de seguridad](#7-fallo-en-el-sistema-de-control-de-seguridad)
+    - [8. Liberación de los frenos del robot](#8-liberación-de-los-frenos-del-robot)
+    - [9. Manipulación inadecuada del equipo durante el mantenimiento](#9-manipulación-inadecuada-del-equipo-durante-el-mantenimiento)
+    - [10. Atrapamiento en las bandas transportadoras](#10-atrapamiento-en-las-bandas-transportadoras)
+  - [Referencias](#referencias)
 
 ---
 
@@ -332,74 +350,6 @@ Se debe determinar cuáles riesgos requieren la incorporación de componentes de
 ### 10. Atrapamiento en las bandas transportadoras
 - Instalar protecciones fijas y móviles en las bandas transportadoras.
 - Integrar sensores de seguridad y paros de emergencia en la línea de producción.
-
-### Sección 11: Análisis Económico de Juguetes
-
-Este documento presenta un análisis detallado de la viabilidad económica del proceso de producción de juguetes, considerando costos, rentabilidad y proyecciones financieras. A través de este estudio, se identifican los principales factores que afectan la sostenibilidad del proyecto y su potencial de crecimiento en el mercado.
-
-### Importancia del Análisis
-El análisis económico es fundamental para determinar si la producción de estos juguetes es viable a largo plazo. Se evalúan tanto los costos de producción como las posibles ganancias, permitiendo tomar decisiones estratégicas informadas. Además, este estudio proporciona métricas clave para mejorar la eficiencia y rentabilidad del proceso productivo.
-
-### Hojas del Archivo
-
-#### 11.1 Costos
-Esta hoja contiene el desglose de costos asociados a la producción de los juguetes. Incluye:
-- Materiales
-- Mano de obra
-- Costos fijos y variables
-- Costos de producción total
-
-El objetivo de este apartado es calcular con precisión el costo unitario de fabricación y su impacto en la rentabilidad.
-
-#### 11.2 Evaluación
-Contiene una evaluación económica del proyecto. Incluye:
-- Indicadores financieros clave
-- Análisis de rentabilidad
-- Costos de inversión inicial
-- Punto de equilibrio
-
-Estos indicadores permiten conocer la viabilidad económica del proyecto y si los ingresos generados superan los costos operativos y de inversión.
-
-#### 11.3 Proyección
-Proporciona un análisis de proyección financiera a futuro. Incluye:
-- Ventas proyectadas
-- Costos estimados
-- Ganancias esperadas en distintos escenarios
-
-Esta hoja es clave para estimar la sostenibilidad del negocio y evaluar su potencial de expansión en un horizonte de cinco años.
-
-#### 11.4 Demanda
-Esta hoja analiza la demanda del mercado para los juguetes, con información sobre:
-- Estimaciones de ventas
-- Análisis de mercado
-- Factores de demanda
-
-Aquí se estudia el comportamiento del consumidor y la aceptación del producto en el mercado, permitiendo ajustar la producción a las necesidades reales.
-
-#### 11.5 Procesos
-Describe los procesos de producción involucrados en la fabricación de los juguetes, incluyendo:
-- Etapas de producción
-- Recursos requeridos
-- Tiempo estimado por proceso
-
-El análisis de los procesos permite optimizar tiempos y mejorar la eficiencia en la manufactura, reduciendo costos innecesarios.
-
-#### 11.6 Lista de Partes
-Contiene el desglose de los componentes y partes necesarias para la fabricación de los juguetes. Incluye:
-- Materiales por unidad
-- Cantidades necesarias
-- Costos unitarios
-
-Esto ayuda a gestionar el inventario de insumos y prever costos de producción, evitando desperdicios y sobrecostos.
-
-
-### Propuesta Implementación Industria 4.0
-
-![Arquitectura de Conexiones](Figuras/Conexiones.png)
-
-Como propuesta de implementación de nuevas tecnologías de la industria 4.0, se plantea esta arquitectura de conexiones del sistema, que implica el uso de Ignition para la implementación del sistema SCADA, LOGIX EMULATE parala emulación del PLC y el uso de RSLINX como gateway de comunicaciones para establecer la subscripción a los tags del PLC por medio de comunicación OPC.
-
-
 
 ---
 

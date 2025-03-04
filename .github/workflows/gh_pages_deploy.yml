@@ -1,5 +1,4 @@
 name: Build and Deploy Jekyll Site
-
 on:
   push:
     branches:
@@ -7,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use an Ubuntu runner
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -19,18 +18,18 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'  # Use a Ruby version that meets your gemspec requirements
+          ruby-version: '3.1'
 
       - name: Install dependencies
+        working-directory: ./docs
         run: bundle install
-        # If your Gemfile is not in the root, add working-directory: ./docs (or your path)
 
       - name: Build site
+        working-directory: ./docs
         run: bundle exec jekyll build
-        # Adjust working-directory if needed
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/_site  # or the folder where your built site is located
+          publish_dir: ./docs/_site

@@ -1,0 +1,2 @@
+# Planeación del proyecto
+En este apartado se podrá evidenciar cómo se estructuró el desarrollo del proyecto, partiendo desde los tiempos asignados a actividades, como el control y distribución de labores para c

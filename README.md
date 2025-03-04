@@ -1,9 +1,8 @@
 # Los Juguetes Hermanos: La historia del producto de Ingeniería
 
-**Autor:** Christian, David Ricaurte, Marcos Alfredo Fierro Sarria
+**Autores:** Christian Andrés Vargas Pérez, David Ricaurte, Marcos Alfredo Fierro Sarria
 **Curso:** Automatización de Procesos de Manufactura  
 **Universidad Nacional de Colombia**  
-**Fecha:** 27 de noviembre de 2024
 
 
 ![file](https://github.com/user-attachments/assets/6f6dba6a-8798-49a9-a980-844bcdee794f)
@@ -22,3 +21,7 @@ A continuación, se presenta la tabla de contenido del proyecto, organizada por 
    - [Digital Factory](./6.%20Digital%20Factory/digital_factory.md)
    - [Controladores Industriales (PLC)](./7.%20Controladores%20industriales%20(PLC)/plc.md)
    - [SCADA](./8.%20SCADA/scada.md)
+
+-------------
+## Enlace de acceso a la página web del proyecto: 
+[Los Juguetes Hermanos](https://cvarper.github.io/Los-Juguetes-Hermanos/)

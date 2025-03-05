@@ -1,7 +1,7 @@
 ---
 caption: #what displays in the portfolio grid:
   title: Propulser
-  subtitle: Automóvil a escala con mecanismo de retroceso
+  subtitle: Automóvil a escala
   thumbnail: assets/img/portfolio/Propulser.png
   
 #what displays when the item is clicked:

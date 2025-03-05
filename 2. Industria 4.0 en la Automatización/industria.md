@@ -2,11 +2,15 @@
 
 ## Identificación de componentes en el proceso de automatización
 
-Frente a la caracterización del proceso productivo propuesta en integración con las etapas de automatización, semiautomatización, y, en general, de mejora continua, se pudo identificar los siguientes componentes desde el apartado de sensores y actuadores. La selección a continuación presenta algunas referencias comerciales que se ajustan a las necesidades del proyecto. 
+Frente a la caracterización del proceso productivo propuesta en integración con las etapas de automatización, semiautomatización, y, en general, de mejora continua, se pudo identificar los siguientes componentes desde el apartado de sensores y actuadores. 
+
+En principio, se partió de la distribución de la fábrica y los requerimientos para dar solución a los requisitos del proceso y la propuesta de automatización.
+
+![Propuesta](./Figuras/sensyact/diagrama_fabrica.png)
+
+La selección a continuación presenta algunas referencias comerciales que se ajustan a las necesidades del proyecto. 
 
 
-
-Entendido! Aquí te dejo la tabla actualizada con las referencias y las imágenes en formato markdown:
 
 | Identificador | Descripción | Especificaciones Técnicas | Referencia | Imagen |
 |---------------|-------------|---------------------------|------------|--------|
@@ -23,7 +27,7 @@ Entendido! Aquí te dejo la tabla actualizada con las referencias y las imágene
 
 
 Respecto a los motores, se plantea el uso de la línea Siemens Simotics
-![Imagen Simotics](./Figuras/sensyact/Simotics.jpg){: width="50%" height="50%" }
+<img src="./Figuras/sensyact/Simotics.jpg" width="50%" height="50%">
 
 | Identificador | Descripción | Especificaciones Técnicas | Referencia | Imagen |
 |---------------|-------------|---------------------------|------------|--------|
@@ -36,17 +40,17 @@ Respecto a los motores, se plantea el uso de la línea Siemens Simotics
 
 De manera complementaria, y entendiendo la naturaleza de el proceso propuesto, se consideran también algunos de los siguientes sensores que podrían para mejorar las integraciones con los niveles de supervisión y gestión de producción en la pirámide de automatización
 
-| Identificador | Cantidad | Descripción | Especificaciones Técnicas | Referencia | Imagen |
-|---------------|----------|-------------|---------------------------|------------|--------|
-| **TS1**     | 1 **Sensor de Temperatura**: Monitorea la temperatura del molde y del plástico fundido en la máquina de inyección para garantizar condiciones óptimas. | Energía: 5–24V DC; Dimensiones: 30×15×10 mm; Precio: ~80 USD | Omega Engineering RTD Series |
-| **PR1**     | 1 **Sensor de Presión**: Supervisa la presión en el sistema de inyección, asegurando la integridad del proceso y evitando defectos. | Energía: 24V DC; Dimensiones: 40×20×15 mm; Precio: ~120 USD | WIKA PTE Series |
-| **VS1**     | 1 **Sensor de Vibración**: Detecta vibraciones anómalas en máquinas y conveyors para el mantenimiento predictivo. | Energía: 12V DC; Dimensiones: 40×20×20 mm; Precio: ~150 USD | Brüel & Kjær 4524 |
-| **CV1**     | 1 **Sensor de Visión / Cámara Industrial**: Controla la calidad visual y verifica la orientación y defectos en los productos. | Resolución: 1080p; Energía: 12V DC; Precio: ~300 USD | Keyence CV-X Series |
-| **HS1**     | 1 **Sensor de Humedad Ambiental**: Mide la humedad en el ambiente, factor importante en procesos sensibles al ambiente. | Energía: 5V DC; Dimensiones: 20×10×10 mm; Precio: ~30 USD | Honeywell HIH Series |
-| **EStop1**  | 4 **Botón de Parada de Emergencia**: Instalado en puntos críticos, permite detener rápidamente el proceso ante situaciones de riesgo. | Energía: 230V AC; Dimensiones: panel compacto; Precio: ~50 USD c/u | Siemens Safety E-Stop |
-| **AC6**     | 1 **Actuador de Control de Flujo (Válvula Neumática/Eléctrica)**: Regula el flujo de material en el sistema de inyección, permitiendo ajustes dinámicos. | Energía: 24V DC; Dimensiones: variable según modelo; Precio: ~300 USD | Festo VUVG Series |
-| **AC7**     | 1 **Actuador Ventilador (Sistema de Extracción)**: Controla la ventilación y extracción de humos, especialmente en la estación de pintura. | Energía: 230V AC; Dimensiones: industrial; Precio: ~200 USD | ebm-papst Industrial Ventilator |
-| **AC8**     | 1 **Actuador de Control de Velocidad (Variador de Frecuencia)**: Ajusta y sincroniza la velocidad de los conveyors, optimizando el flujo de producción. | Energía: 230V AC; Dimensiones: industrial; Precio: ~400 USD | Siemens SINAMICS Series |
+| Identificador | Cantidad | Descripción | Especificaciones Técnicas | Referencia |
+|---------------|----------|-------------|---------------------------|------------|
+| **TS1**     | 1 |**Sensor de Temperatura**: Monitorea la temperatura del molde y del plástico fundido en la máquina de inyección para garantizar condiciones óptimas. | Energía: 5–24V DC; Dimensiones: 30×15×10 mm; Precio: ~80 USD | Omega Engineering RTD Series |
+| **PR1**     | 1 |**Sensor de Presión**: Supervisa la presión en el sistema de inyección, asegurando la integridad del proceso y evitando defectos. | Energía: 24V DC; Dimensiones: 40×20×15 mm; Precio: ~120 USD | WIKA PTE Series |
+| **VS1**     | 1 |**Sensor de Vibración**: Detecta vibraciones anómalas en máquinas y conveyors para el mantenimiento predictivo. | Energía: 12V DC; Dimensiones: 40×20×20 mm; Precio: ~150 USD | Brüel & Kjær 4524 |
+| **CV1**     | 1 |**Sensor de Visión / Cámara Industrial**: Controla la calidad visual y verifica la orientación y defectos en los productos. | Resolución: 1080p; Energía: 12V DC; Precio: ~300 USD | Keyence CV-X Series |
+| **HS1**     | 1 |**Sensor de Humedad Ambiental**: Mide la humedad en el ambiente, factor importante en procesos sensibles al ambiente. | Energía: 5V DC; Dimensiones: 20×10×10 mm; Precio: ~30 USD | Honeywell HIH Series |
+| **EStop1**  | 4 |**Botón de Parada de Emergencia**: Instalado en puntos críticos, permite detener rápidamente el proceso ante situaciones de riesgo. | Energía: 230V AC; Dimensiones: panel compacto; Precio: ~50 USD c/u | Siemens Safety E-Stop |
+| **AC6**     | 1 |**Actuador de Control de Flujo (Válvula Neumática/Eléctrica)**: Regula el flujo de material en el sistema de inyección, permitiendo ajustes dinámicos. | Energía: 24V DC; Dimensiones: variable según modelo; Precio: ~300 USD | Festo VUVG Series |
+| **AC7**     | 1 |**Actuador Ventilador (Sistema de Extracción)**: Controla la ventilación y extracción de humos, especialmente en la estación de pintura. | Energía: 230V AC; Dimensiones: industrial; Precio: ~200 USD | ebm-papst Industrial Ventilator |
+| **AC8**     | 1 |**Actuador de Control de Velocidad (Variador de Frecuencia)**: Ajusta y sincroniza la velocidad de los conveyors, optimizando el flujo de producción. | Energía: 230V AC; Dimensiones: industrial; Precio: ~400 USD | Siemens SINAMICS Series |
 
 
 ## Plantemiento de la lógica de operación

@@ -1,0 +1,56 @@
+\documentclass{article} 
+\usepackage{tikz} 
+\usepackage{grafcet} % Make sure grafcet.sty is in your TeX path 
+\begin{document}
+
+\begin{tikzpicture}[>=stealth]
+
+% Step 1: Injection Molding Completed 
+\EtapeInit[0,0]{1} 
+\Transition{1}
+
+% Divergence: Sensor selection branch (using DivOU to split into three sensor branches) 
+\DivOU{X1}{-5/S3,0/S2,5/S1}
+
+% Branch for Sensor3 (first activation: Desbarbado3 process) 
+\SequenceTT[S3]{S3}{2}
+% Branch for Sensor2 (second activation: Desbarbado2 process) 
+\SequenceTT[S2]{S2}{3}
+% Branch for Sensor1 (last activation: sand_deburring1 process) 
+\SequenceTT[S1]{S1}{4}
+
+% Convergence of the three branches: using longest branch's transition (T4) as reference 
+\ConvOU[-3]{T4}{X1}{C1} 
+\Etape[C1]{5} % Step 5: Painting station starts 
+\Transition{5}
+\DecaleNoeudy[-1]{T5}{T5adj} % Shift transition node upward slightly
+\Recept{T5adj}{$20\,s$} % 20-second painting delay
+
+% Assembly Process 
+\Etape{6} % Step 6: Assembly station 
+\Transition{6}
+\Recept{T6}{$30\,s$} % 30-second assembly delay
+
+% Merge of lines into packaging conveyor 
+\Etape{7} % Step 7: Final product positioned on unified conveyor 
+\Transition{7}
+
+% Packaging Process (Pick & Place) - Divergence to represent the two conveyors: product and box 
+\DivOU{X7}{-5/boxConv,5/productConv}
+
+% Branch for box process (boxConv stops when boxSensor is triggered) 
+\SequenceTT[boxConv]{boxSensor}{8} % Step 8: Box positioned 
+% Branch for product process (productConv stops when productSensor is triggered) 
+\SequenceTT[productConv]{productSensor}{9} % Step 9: Product waiting for pick
+
+% Convergence of packaging actions 
+\ConvOU[-3]{T8,T9}{C2} 
+\Etape[C2]{10} % Step 10: Pick and Place packaging complete
+\Transition{10} % Create transition T10
+
+% Loop back to start (to indicate continuous operation) 
+\LienRetour[15]{T10}{X1} % Increased offset to avoid overlap
+
+\end{tikzpicture}
+
+\end{document}

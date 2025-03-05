@@ -1,18 +1,11 @@
 ---
-title: Project Threads
-subtitle: subtitle lorem ipsum dolor sit amet consectetur.
+title: Qammar
 image: assets/img/portfolio/qammar.png
-alt: Shirts on a hanger
+alt: Marioneta
 
 caption:
-  title: Threads
-  subtitle: Illustration
+  title: Qammar
+  subtitle: Marioneta
   thumbnail: assets/img/portfolio/qammar.png
 ---
-Use this area to describe your project. **Markdown** supported. This entry (project1.md) uses links for the image sources. All other projects in the portfolio use local images. Both work just fine! Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-
-{:.list-inline}
-- Date: January 2017
-- Client: Threads
-- Category: Illustration
-
+Basado en los modelos de marionetas turcas, este juguete busca estimular la creatividad de los niños mediante su diseño minimalista y colores vistosos.

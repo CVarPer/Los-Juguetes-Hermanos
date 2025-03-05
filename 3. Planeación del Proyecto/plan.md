@@ -335,3 +335,5 @@ Debido a las facilidades de integración entre GitHub Projects y el repositorio 
 
 ## Modelo de negocio
 Para establecer el proyecto en el escenario colombiano de la industria de juguetes, se ideó el modelo de negocio bajo el cual operaría la compañía de "Los Juguetes Hermanos", para así poder entender sus necesidades y hacer un reconocimiento de los aspectos económicos principales  
+
+![modelo de negocio](./Figuras/modeloNegocio.png)

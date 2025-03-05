@@ -20,9 +20,9 @@ fonts_urls:
 fonts:
   - name: "Montserrat"
     for: "heading"
-  - name: "Kaushan Script"
+  - name: "Montserrat"
     for: "script"
-  - name: "Droid Serif"
+  - name: "Montserrat"
     for: "serif"
-  - name: "Roboto Slab"
+  - name: "Montserrat"
     for: "body"

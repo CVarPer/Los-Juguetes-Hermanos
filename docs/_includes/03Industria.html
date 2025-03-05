@@ -1,9 +1,317 @@
-<section class="page-section" id="Industria">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext.plan.title | markdownify | default: "Industria 4.0" }}</h2>
-        </div>
+<section class="page-section" id="03Industria">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Industria 4.0 en la automatización</h2>
       </div>
     </div>
-  </section>
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Identificación de componentes -->
+        <h3>Identificación de componentes en el proceso de automatización</h3>
+        <p>
+          Frente a la caracterización del proceso productivo propuesta en integración con las etapas de automatización, semiautomatización, y, en general, de mejora continua, se pudo identificar los siguientes componentes desde el apartado de sensores y actuadores.
+        </p>
+        <p>
+          En principio, se partió de la distribución de la fábrica y los requerimientos para dar solución a los requisitos del proceso y la propuesta de automatización.
+        </p>
+        <div class="text-center my-3">
+          <img src="./assets/img/pages/diagrama_fabrica.png" alt="Propuesta" class="img-fluid">
+        </div>
+        <p>
+          La selección a continuación presenta algunas referencias comerciales que se ajustan a las necesidades del proyecto.
+        </p>
+        <!-- Tabla de Sensores y Actuadores -->
+        <div class="table-responsive mb-4">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Identificador</th>
+                <th>Descripción</th>
+                <th>Especificaciones Técnicas</th>
+                <th>Referencia</th>
+                <th>Imagen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>LS01</strong></td>
+                <td><strong>Sensor de Nivel</strong>: Detecta niveles bajos o altos en la tolva de la máquina de inyección y activa alarmas.</td>
+                <td>Energía: 24V DC; Dimensiones: 50x20x15 mm; Precio: ~150 USD</td>
+                <td>Rechner KA0417</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/KA0417.jpg" alt="Imagen KA0417" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>CS1</strong></td>
+                <td><strong>Sensor Conveyor - Línea 1</strong>: Selecciona productos para la Línea 1 en Conveyor 1.</td>
+                <td>Energía: 12V DC; Dimensiones: 40x15x10 mm; Precio: ~50 USD</td>
+                <td>Omron E2E-X5</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/E2E-X5.jpg" alt="Imagen E2E-X5" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>CS2</strong></td>
+                <td><strong>Sensor Conveyor - Línea 2</strong>: Selecciona productos para la Línea 2 en Conveyor 1.</td>
+                <td>Energía: 12V DC; Dimensiones: 40x15x10 mm; Precio: ~50 USD</td>
+                <td>Omron E2E-X5</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/E2E-X5.jpg" alt="Imagen E2E-X5" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>CS3</strong></td>
+                <td><strong>Sensor Conveyor - Línea 3</strong>: Activa y desactiva otros sensores para el control cíclico en Conveyor 1.</td>
+                <td>Energía: 12V DC; Dimensiones: 40x15x10 mm; Precio: ~50 USD</td>
+                <td>Omron E2E-X5</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/E2E-X5.jpg" alt="Imagen E2E-X5" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>PS1</strong></td>
+                <td><strong>Sensor de Pintura</strong>: Ubicado al final del conveyor en painting_st_1, indica el inicio del proceso de pintura.</td>
+                <td>Energía: 12V DC; Dimensiones: 35x15x10 mm; Precio: ~45 USD</td>
+                <td>Omron E2E-X5</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/E2E-X5.jpg" alt="Imagen Industrial Sensor" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>AS1</strong></td>
+                <td><strong>Sensor de Ensamblaje</strong>: Ubicado al final del conveyor en assembly_st_1, activa el proceso de ensamblaje.</td>
+                <td>Energía: 12V DC; Dimensiones: 35x15x10 mm; Precio: ~45 USD</td>
+                <td>Omron E2E-X5</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/E2E-X5.jpg" alt="Imagen Industrial Sensor" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>BS1</strong></td>
+                <td><strong>Sensor de Caja</strong>: Detecta la posición de la caja en box_conv para detener el conveyor.</td>
+                <td>Energía: 12V DC; Dimensiones: 30x15x10 mm; Precio: ~40 USD</td>
+                <td>SICK Sensor (modelo WTB)</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/WTB.jpeg" alt="Imagen WTB" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>PDS1</strong></td>
+                <td><strong>Sensor de Producto</strong>: Detecta la presencia del producto en product_conv para detener el movimiento.</td>
+                <td>Energía: 12V DC; Dimensiones: 30x15x10 mm; Precio: ~40 USD</td>
+                <td>SICK Sensor (modelo WTB)</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/WTB.jpeg" alt="Imagen SICK Sensor" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>ALM1</strong></td>
+                <td><strong>Actuador de Alarma</strong>: Activa una alarma en caso de que el nivel de plástico sea inadecuado.</td>
+                <td>Energía: 12V DC / 230V AC; Dimensiones: panel compacto; Precio: ~100 USD</td>
+                <td>Siemens Sirena Industrial</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/Sirena_Industrial.jpeg" alt="Imagen Sirena Industrial" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>PG1</strong></td>
+                <td><strong>Actuador Pick &amp; Place Gripper</strong>: Gripper electromecánico que recoge el producto y lo coloca en la caja.</td>
+                <td>Energía: 24V DC; Dimensiones: 100x50x50 mm; Precio: ~200 USD</td>
+                <td>Festo Electric Gripper</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/EHPS.jpg" alt="gripper" class="img-fluid">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Motores -->
+        <p>
+          Respecto a los motores, se plantea el uso de la línea Siemens Simotics
+        </p>
+        <div class="text-center my-3">
+          <img src="./assets/img/pages/Simotics.jpg" alt="Siemens Simotics" width="50%" height="50%" class="img-fluid">
+        </div>
+        <!-- Tabla de Motores -->
+        <div class="table-responsive mb-4">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Identificador</th>
+                <th>Descripción</th>
+                <th>Especificaciones Técnicas</th>
+                <th>Referencia</th>
+                <th>Imagen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>AC1</strong></td>
+                <td><strong>Actuador Conveyor 1</strong>: Motor que acciona el Conveyor 1 para transportar las piezas.</td>
+                <td>Energía: 230V AC; Dimensiones: motor industrial; Precio: ~500 USD</td>
+                <td>Siemens Simotics</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>AC2</strong></td>
+                <td><strong>Actuador en Painting_st_1</strong>: Motor del conveyor que lleva las piezas a la estación de pintura.</td>
+                <td>Energía: 230V AC; Dimensiones: motor industrial; Precio: ~500 USD</td>
+                <td>Siemens Simotics</td>
+                <td class="text-center">
+                  <img src="./assets/img/pages/Simotics.jpg" alt="Imagen Simotics" class="img-fluid">
+                </td>
+              </tr>
+              <tr>
+                <td><strong>AC3</strong></td>
+                <td><strong>Actuador en Assembly_st_1</strong>: Motor del conveyor que lleva las piezas a la estación de ensamblaje.</td>
+                <td>Energía: 230V AC; Dimensiones: motor industrial; Precio: ~500 USD</td>
+                <td>Siemens Simotics</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>AC4</strong></td>
+                <td><strong>Actuador en Product_conv</strong>: Motor del conveyor en el proceso de Pick and Place para el producto.</td>
+                <td>Energía: 230V AC; Dimensiones: motor industrial; Precio: ~500 USD</td>
+                <td>Siemens Simotics</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>AC5</strong></td>
+                <td><strong>Actuador en Box_conv</strong>: Motor del conveyor en el proceso de Pick and Place para la caja.</td>
+                <td>Energía: 230V AC; Dimensiones: motor industrial; Precio: ~500 USD</td>
+                <td>Siemens Simotics</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sensores complementarios -->
+        <p>
+          De manera complementaria, y entendiendo la naturaleza de el proceso propuesto, se consideran también algunos de los siguientes sensores que podrían para mejorar las integraciones con los niveles de supervisión y gestión de producción en la pirámide de automatización
+        </p>
+        <div class="table-responsive mb-4">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Identificador</th>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Especificaciones Técnicas</th>
+                <th>Referencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>TS1</strong></td>
+                <td>1</td>
+                <td><strong>Sensor de Temperatura</strong>: Monitorea la temperatura del molde y del plástico fundido en la máquina de inyección para garantizar condiciones óptimas.</td>
+                <td>Energía: 5–24V DC; Dimensiones: 30×15×10 mm; Precio: ~80 USD</td>
+                <td>Omega Engineering RTD Series</td>
+              </tr>
+              <tr>
+                <td><strong>PR1</strong></td>
+                <td>1</td>
+                <td><strong>Sensor de Presión</strong>: Supervisa la presión en el sistema de inyección, asegurando la integridad del proceso y evitando defectos.</td>
+                <td>Energía: 24V DC; Dimensiones: 40×20×15 mm; Precio: ~120 USD</td>
+                <td>WIKA PTE Series</td>
+              </tr>
+              <tr>
+                <td><strong>VS1</strong></td>
+                <td>1</td>
+                <td><strong>Sensor de Vibración</strong>: Detecta vibraciones anómalas en máquinas y conveyors para el mantenimiento predictivo.</td>
+                <td>Energía: 12V DC; Dimensiones: 40×20×20 mm; Precio: ~150 USD</td>
+                <td>Brüel &amp; Kjær 4524</td>
+              </tr>
+              <tr>
+                <td><strong>CV1</strong></td>
+                <td>1</td>
+                <td><strong>Sensor de Visión / Cámara Industrial</strong>: Controla la calidad visual y verifica la orientación y defectos en los productos.</td>
+                <td>Resolución: 1080p; Energía: 12V DC; Precio: ~300 USD</td>
+                <td>Keyence CV-X Series</td>
+              </tr>
+              <tr>
+                <td><strong>HS1</strong></td>
+                <td>1</td>
+                <td><strong>Sensor de Humedad Ambiental</strong>: Mide la humedad en el ambiente, factor importante en procesos sensibles al ambiente.</td>
+                <td>Energía: 5V DC; Dimensiones: 20×10×10 mm; Precio: ~30 USD</td>
+                <td>Honeywell HIH Series</td>
+              </tr>
+              <tr>
+                <td><strong>EStop1</strong></td>
+                <td>4</td>
+                <td><strong>Botón de Parada de Emergencia</strong>: Instalado en puntos críticos, permite detener rápidamente el proceso ante situaciones de riesgo.</td>
+                <td>Energía: 230V AC; Dimensiones: panel compacto; Precio: ~50 USD c/u</td>
+                <td>Siemens Safety E-Stop</td>
+              </tr>
+              <tr>
+                <td><strong>AC6</strong></td>
+                <td>1</td>
+                <td><strong>Actuador de Control de Flujo (Válvula Neumática/Eléctrica)</strong>: Regula el flujo de material en el sistema de inyección, permitiendo ajustes dinámicos.</td>
+                <td>Energía: 24V DC; Dimensiones: variable según modelo; Precio: ~300 USD</td>
+                <td>Festo VUVG Series</td>
+              </tr>
+              <tr>
+                <td><strong>AC7</strong></td>
+                <td>1</td>
+                <td><strong>Actuador Ventilador (Sistema de Extracción)</strong>: Controla la ventilación y extracción de humos, especialmente en la estación de pintura.</td>
+                <td>Energía: 230V AC; Dimensiones: industrial; Precio: ~200 USD</td>
+                <td>ebm-papst Industrial Ventilator</td>
+              </tr>
+              <tr>
+                <td><strong>AC8</strong></td>
+                <td>1</td>
+                <td><strong>Actuador de Control de Velocidad (Variador de Frecuencia)</strong>: Ajusta y sincroniza la velocidad de los conveyors, optimizando el flujo de producción.</td>
+                <td>Energía: 230V AC; Dimensiones: industrial; Precio: ~400 USD</td>
+                <td>Siemens SINAMICS Series</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Lógica de operación -->
+        <h3>Plantemiento de la lógica de operación</h3>
+        <p>
+          A partir de lo anterior, se formuló la lógica de proceso mediante el lenguaje de programación industrial SFC o Grafcet. Puede ser consultado en el archivo: <a href="./Grafcet/grafcet.pdf">Lógica de operación</a>
+        </p>
+
+        <!-- Propuesta Implementación -->
+        <h3>Propuesta Implementación Industria 4.0</h3>
+        <p>
+          Como propuesta de implementación de nuevas tecnologías de la Industria 4.0, se plantea esta arquitectura de conexiones del sistema, que implica el uso de Ignition para la implementación del sistema SCADA, LOGIX EMULATE para la emulación del PLC y el uso de RSLINX como gateway de comunicaciones para establecer la suscripción a los tags del PLC por medio de comunicación OPC.
+        </p>
+        <p>
+          Esta arquitectura permite la integración de sistemas de automatización avanzada con supervisión remota, facilitando la adquisición de datos en tiempo real, la optimización de procesos y la interoperabilidad entre distintos dispositivos y plataformas industriales.
+        </p>
+        <div class="text-center my-3">
+          <img src="./assets/img/pages/Conexiones.png" alt="Arquitectura de Conexiones" class="img-fluid">
+        </div>
+
+        <!-- Tecnologías utilizadas -->
+        <h3>Tecnologías utilizadas</h3>
+        <ul>
+          <li><strong>Ignition</strong>: Plataforma SCADA/MES que permite la visualización, control y análisis de datos en tiempo real. Facilita la integración con bases de datos y sistemas empresariales.</li>
+          <li><strong>LOGIX EMULATE</strong>: Herramienta de emulación de Rockwell Automation que permite simular la ejecución de programas en ControlLogix sin necesidad de un hardware físico.</li>
+          <li><strong>RSLINX</strong>: Software de comunicación de Rockwell Automation que actúa como gateway para la conexión entre el PLC y otros sistemas mediante el protocolo OPC.</li>
+          <li><strong>OPC (OLE for Process Control)</strong>: Protocolo de comunicación estándar utilizado para la integración entre dispositivos de automatización y sistemas de supervisión.</li>
+          <li><strong>Ethernet/IP</strong>: Protocolo de comunicación industrial basado en Ethernet, utilizado para la conexión entre PLCs, sensores y sistemas SCADA.</li>
+          <li><strong>Base de Datos SQL</strong>: Se utiliza para almacenar datos históricos del sistema, permitiendo la generación de reportes y análisis de tendencias.</li>
+        </ul>
+
+        <!-- Lógica de Programación del PLC -->
+        <h3>Lógica de Programación del PLC</h3>
+        <ul>
+          <li><strong>Estructura modular</strong>: Código organizado en rutinas y subrutinas para facilitar la escalabilidad y mantenimiento.</li>
+          <li><strong>Control por eventos</strong>: Implementación de lógica basada en cambios de estado para optimizar tiempos de respuesta.</li>
+          <li><strong>Optimización de ciclos de escaneo</strong>: Priorización de tareas críticas para mejorar la eficiencia del control.</li>
+          <li><strong>Integración con OPC</strong>: Suscripción de tags del PLC mediante RSLINX para intercambio de datos con el sistema SCADA.</li>
+          <li><strong>Diagnóstico y depuración</strong>: Uso de herramientas de simulación para pruebas previas a la implementación en hardware físico.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+```

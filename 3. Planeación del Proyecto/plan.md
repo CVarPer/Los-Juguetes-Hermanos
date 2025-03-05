@@ -330,9 +330,6 @@ Debido a las facilidades de integración entre GitHub Projects y el repositorio 
 | 6    | Elaboración del video resumen                                              | 01/03/2025      | 01/03/2025   | 1 día     | Christian      | Fase 5 completada                                |
 | 6    | Preparación de la sustentación y revisión final de entregables              | 02/03/2025      | 02/03/2025   | 1 día     | Christian      | Video resumen                                  |
 
-
-## 3. Matriz de Adquisiciones
-
 ## Modelo de negocio
 Para establecer el proyecto en el escenario colombiano de la industria de juguetes, se ideó el modelo de negocio bajo el cual operaría la compañía de "Los Juguetes Hermanos", para así poder entender sus necesidades y hacer un reconocimiento de los aspectos económicos principales  
 

@@ -29,7 +29,7 @@ La selección a continuación presenta algunas referencias comerciales que se aj
 Respecto a los motores, se plantea el uso de la línea Siemens Simotics
 <img src="./Figuras/sensyact/Simotics.jpg" width="50%" height="50%">
 
-| Identificador | Descripción | Especificaciones Técnicas | Referencia | Imagen |
+| Identificador |Cantidad| Descripción | Especificaciones Técnicas | Referencia | Imagen |
 |---------------|-------------|---------------------------|------------|--------|
 | **AC1**     |    1   | **Actuador Conveyor 1**: Motor que acciona el Conveyor 1 para transportar las piezas. | Energía: 230V AC; Dimensiones: motor industrial; Precio: ~500 USD | Siemens Simotics | 
 | **AC2**     | 3 |**Actuador en Painting_st_1**: Motor del conveyor que lleva las piezas a la estación de pintura. | Energía: 230V AC; Dimensiones: motor industrial; Precio: ~500 USD | Siemens Simotics | ![Imagen Simotics](./Figuras/sensyact/Simotics.jpg) |

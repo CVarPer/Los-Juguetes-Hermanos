@@ -195,6 +195,13 @@ Como sìntesis de lo anterior, se muestra la tabla de componentes de la celda:
 | 1        | **Software de Seguridad** - ABB SafeMove2 |
 | 4        | **Sistema de Señalización** - Patlite Signal Tower LR6 |
 
+
+### Videos de las rutinas:
+
+[Cambio de moldes](https://www.youtube.com/watch?v=O_rFBunk96M)
+
+[Extracción de piezas](https://www.youtube.com/watch?v=QldBP1I4acU)
+
 ### Duty Cycle y Throughput Time
 En la plataforma de RobotStudio se cronometró el tiempo  para la rutina de cambio de moldes y para la extracción de la pieza de la inyectora. En el caso de extracción de piezas el duty cycle y el throughtput time.  
 

@@ -1,0 +1,556 @@
+<section class="bg-light page-section" id="05Celdas">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Título -->
+          <h2 class="section-heading text-uppercase">Análisis de la celda robotizada</h2>
+  
+          <!-- Índice -->
+          
+  
+          <!-- Introducción -->
+          <h3 id="introducción">Introducción</h3>
+          <p>
+            En el marco de un proceso de mejora continua y optimización de la producción, la empresa Los Juguetes Hermanos ha identificado oportunidades estratégicas para incrementar la eficiencia en su cadena de manufactura. Con este objetivo, el departamento de ingeniería ha desarrollado un plan integral que contempla la integración de celdas robotizadas, la adquisición de maquinaria avanzada y una redistribución del layout de planta. Estas medidas buscan reducir tiempos de ciclo, minimizar desperdicios y mejorar la flexibilidad operativa.
+          </p>
+          <p>
+            Actualmente, el proceso central de la producción es la inyección de piezas plásticas, la cual se lleva a cabo mediante tres inyectoras operando simultáneamente. No obstante, el análisis de producción mediante la herramienta de Tecnomatix evidenció un uso ineficiente de los recursos, ya que cada inyectora funcionaba a solo un 33,33% de su capacidad, dedicándose exclusivamente a la fabricación de un único tipo de producto en cada ciclo de producción. Este esquema generaba tiempos muertos elevados y una subutilización del equipo, impactando negativamente en la productividad y en los costos operativos.
+          </p>
+          <p>
+            Para abordar esta problemática, se ha propuesto la consolidación de una celda robòtica para usar una única inyectora, optimizada mediante la implementación de un manipulador robótico. Este robot tendrá la función de extraer las piezas inyectadas y realizar el cambio automatizado de moldes, eliminando la necesidad de intervención manual en esta etapa crítica. Con esta solución, el tiempo de configuración (set-up) para el cambio de moldes, que suele encontrarse en el orden de 2 a 3 horas por cada modificación dependiendo del proceso, podrá reducirse a un minuto o menos, lo que representa una disminución superior al 90% en los tiempos de ajuste. Finalmente, además de la consolidación de celdas robotizadas en la etapa de inyección, el plan de optimización contempla la automatización parcial de los procesos de desbarbado y empaque, dos operaciones clave en la línea de producción.
+          </p>
+  
+          <hr>
+  
+          <!-- Objetivo -->
+          <h3 id="objetivo">Objetivo</h3>
+          <p>
+            Detallar las etapas del proceso de fabricación y seleccionar una o varias donde se aplique la implementación de la celda robotizada. Detallar las rutinas del manipulador robótico y componentes necesarios.
+          </p>
+  
+          <hr>
+  
+          <!-- Etapas Principales -->
+          <h3 id="etapas-principales">Etapas Principales</h3>
+          <h4 id="identificación-y-selección-de-la-etapa-del-proceso">Identificación y Selección de la Etapa del Proceso</h4>
+          <p>
+            La fábrica de <strong>Los Juguetes Hermanos</strong> cuenta con las siguientes etapas de producción:
+          </p>
+          <p>
+            Para realizar el diseño de las celdas automatizadas y el desarrollo de los entregables solicitados, se sigue el diagrama de flujo correspondiente a la figura:
+          </p>
+          <div class="text-center my-3">
+            <img src="https://github.com/user-attachments/assets/b2748e9a-ec5b-4563-ab4d-ed934434c6c6" alt="Diagrama de flujo" class="img-fluid">
+          </div>
+          <ul>
+            <li><strong>Registro:</strong> Es una estación en la que se lleva el inventario de la materia prima que ingresa en la fábrica. Se comprueba peso para verificar la cantidad de pellets que entra en el proceso, otros insumos como la pintura son marcados con códigos de barras.</li>
+            <li><strong>Inyección:</strong> Proceso primario de la fábrica. Es donde se da forma a las piezas que dan vida a nuestros productos. Se usa inyección por presión, lo que permite que el proceso sea productivo.</li>
+            <li><strong>Lijado:</strong> En esta etapa se lija el material proveniente del proceso de inyección, esto se hace para mejorar la adherencia de la pintura en el etapa de pinturado.</li>
+            <li><strong>Desbarbado:</strong> Se remueven excedentes de material producto del proceso de inyección.</li>
+            <li><strong>Pintado:</strong> Se aplica pintura con aerosol de forma manual sobre las piezas que así lo requieran.</li>
+            <li><strong>Secado:</strong> Las piezas son sometidas a una cámara de viento para hacer que la pintura se seque rápidamente.</li>
+            <li><strong>Empaque:</strong> Esta etapa se divide en dos. El empaque individual de cada producto y el empaque por lotes para el despacho.</li>
+            <li><strong>Despacho:</strong> El material se prepara y/o almacena hasta que se lleve a los respectivos canales de distribución y comercialización.</li>
+          </ul>
+  
+          <h5 id="etapas-con-mejoras-en-productividad">Etapas con Mejoras en Productividad</h5>
+          <ul>
+            <li><strong>Inyección:</strong> Se opta por usar una celda robotizada con las funciones de extraer las piezas resultantes del proceso de inyección, así como la extracción e instalación de moldes en la inyectora, lo que ahorra tiempos y costos, ya que de forma manual podríamos tener paros en la producción de hasta 6 horas o incluso más; además, este proceso participa activamente en la agregación de valor al producto.</li>
+            <li><strong>Desbarbado:</strong> Se ha explorado una nueva tecnología de desbarbado criogénico, donde las piezas son expuestas a bajas temperaturas y situadas en un tambor rotatorio, proceso en el que se desprenden las rebabas con espesores menores a 3 mm, reduciendo significativamente los tiempos del proceso.</li>
+            <li><strong>Empaque:</strong> Dado que el empacado por lotes no aporta directamente en la agregación de valor al producto, se optó por automatizar el empacado individual de cada juguete, mediante la aplicación de una celda robotizada inspirada en procesos de empacado de otros sectores.</li>
+          </ul>
+  
+          <hr>
+  
+          <!-- Celda Robotizada: IRB 6700 -->
+          <h3 id="celda-robotizada-irb-6700">Celda Robotizada: IRB 6700</h3>
+          <p>
+            El robot desempeña un papel de <strong>Pick and Place</strong>, lo cual es clave en la automatización del proceso de inyección, encargándose de la extracción de piezas y el cambio de moldes en la inyectora. La producción se organiza en ciclos secuenciales para los moldes <strong>Qammar, Propulser y Trompo de Batalla</strong>, alternando su uso tras alcanzar la meta diaria de cada producto.
+          </p>
+          <p>
+            Para garantizar una operación eficiente y segura, el sistema cuenta con <strong>sensores de colisión</strong> para la detección de herramientas y <strong>sensores de posición</strong> para verificar la correcta instalación de los moldes en la inyectora.
+          </p>
+  
+          <!-- Procedimiento de Operación -->
+          <h3 id="procedimiento-de-operación">Procedimiento de Operación</h3>
+          <ol>
+            <li>El robot inicia en <strong>posición de "home"</strong>, con todas las herramientas en la estación de almacenamiento y el <strong>molde Qammar</strong> montado en la inyectora.</li>
+            <li>Se selecciona la herramienta de extracción de piezas y se inicia el ciclo de producción.</li>
+            <li>El robot ejecuta la rutina de extracción tras cada inyección, repitiéndose hasta alcanzar la <strong>meta diaria</strong> del producto.</li>
+            <li>Alcanzado el objetivo, la inyectora se detiene y el robot cambia a la herramienta de manipulación de moldes.</li>
+            <li>Se realiza el <strong>cambio de molde</strong>, verificando su correcta instalación antes de continuar.</li>
+            <li>El proceso se repite para los tres moldes hasta completar la producción diaria.</li>
+            <li>Al finalizar la jornada, el <strong>molde Qammar</strong> queda instalado en la inyectora para el siguiente ciclo.</li>
+          </ol>
+          <p>
+            Este esquema operativo <strong>minimiza tiempos de inactividad y optimiza el uso de los recursos</strong>, asegurando una producción continua y eficiente.
+          </p>
+          <p>
+            Para garantizar una sincronización precisa entre la extracción de la pieza desde la inyectora y el proceso de inyección, se ha estandarizado el tiempo de ciclo de ambos procesos. Esta sincronización es fundamental para evitar colisiones entre la herramienta y el molde, así como posibles impactos entre las piezas recién inyectadas, el molde o la propia inyectora.
+          </p>
+  
+          <!-- Layout de la Celda -->
+          <h4 id="layout-de-la-celda">Layout de la Celda</h4>
+          <p>
+            El ingreso de materia prima a la celda robotizada se realiza a través de un <strong>Powder Auger Feeder 4</strong>, un alimentador diseñado para la dosificación precisa de material particulado, que puede ser empleado para suministrar material polimérico en formato de pellets. Este sistema permite la incorporación opcional de partículas de colorante para modificar la apariencia del producto final según los requerimientos de producción. La celda está delimitada por las barreras de contención, las cuales suman un área de:
+          </p>
+          <div class="text-center my-3">
+            <img src="https://github.com/user-attachments/assets/e7ac21cd-bad7-41a6-a6d0-e5537db7067f" alt="Barreras de contención" class="img-fluid">
+          </div>
+          <p>
+            Una vez completado el proceso de inyección, las piezas moldeadas son extraídas y transportadas fuera de la celda para continuar con el proceso de desbarbado, asegurando así su adecuada preparación para el ensamblaje del juguete.
+          </p>
+          <div class="text-center my-3">
+            <img src="https://github.com/user-attachments/assets/ffae11c4-e3f7-4410-9c99-828adadd2a10" alt="Proceso de desbarbado" class="img-fluid">
+          </div>
+  
+          <!-- Componentes -->
+          <h4 id="componentes">Componentes</h4>
+          <p>
+            En esta sección se detallan los elementos que se usarán en las celdas. La selección de los componentes se hizo en base a las normativas <strong>IEC 60204-1</strong> e <strong>ISO 10218-1:2011</strong>.
+          </p>
+          <ul>
+            <li>
+              <strong>IRB 6700 300-270:</strong> Robot seleccionado para esta tarea, diseñado para mover cargas pesadas (más de 200 kg). Su tamaño le permite alcanzar los elementos y estaciones de la celda sin dificultad, como la estación de herramientas, la banda transportadora y la inyectora.
+              <div class="text-center my-2">
+                <img src="https://github.com/user-attachments/assets/c2599466-26ac-4dac-937d-9f7e55ccf8df" alt="IRB 6700" class="img-fluid">
+              </div>
+            </li>
+            <li><strong>IRC5 u OmniCore:</strong> Controlador de ABB para integrarse con el IRB 6700.</li>
+            <li><strong>370 E GOLDEN ELECTRIC 2:</strong> Inyectora seleccionada para volúmenes de producción bajos a medios. Destaca por su facilidad en la extracción y cambio de moldes, optimizando el tiempo de producción.</li>
+            <li><strong>Conveyor 950 4000 h2:</strong> Banda transportadora utilizada para la entrada y salida de material en la celda. Su disponibilidad en el catálogo de ABB facilita su integración con el robot.</li>
+            <li><strong>Barreras físicas:</strong> Se debe considerar su robustez, facilidad de instalación y compatibilidad con los componentes de seguridad.</li>
+            <li><strong>Paros de emergencia:</strong> Dispositivo que permite detener el robot de forma inmediata en casos de emergencia. Se selecciona un pulsador normalmente cerrado, ABB Jokab Safety E-Stop Button (SFC-EB3A).</li>
+            <li><strong>Paros de seguridad:</strong> Se integra un relé de seguridad para desconectar el robot de la red eléctrica en caso de fallos. Se selecciona el ABB Jokab Safety Pluto Safety PLC (Pluto S20 v2), que permite diagnósticos en tiempo real y redundancia a fallos críticos.</li>
+            <li><strong>Escáneres Láser:</strong> Detectan la presencia en el área de trabajo de la celda robotizada. Se usa el modelo SICK S3000 Advance, configurable para distintas distancias de detección. Detiene el ciclo de trabajo si detecta a un operador en la celda.</li>
+            <li><strong>Accionamiento:</strong> Se realiza con un tablero de control con paradas de emergencia integradas. También puede usarse en conjunto con FlexPendant de ABB.</li>
+            <li><strong>ABB SafeMove2:</strong> Solución de software y hardware para mejorar la seguridad de los robots ABB, eliminando la necesidad de hardware adicional.</li>
+            <li><strong>Patlite Signal Tower:</strong> Proporciona información visual clara del estado operativo del robot. Se selecciona la LR6 DC-ASSY BUZZER POLE-SZL001 Series 60mm LED Signal Tower Lights, instaladas en cada esquina de la celda.</li>
+          </ul>
+  
+          <!-- Efectores Finales -->
+          <h5 id="efectores-finales">Efectores Finales</h5>
+          <p>
+            Para efectuar el cambio entre moldes, se requiere una herramienta específica que se enrosca en la parte superior del molde.
+          </p>
+          <p>
+            Dado que el molde pesa 100 kg, el tornillo debe soportar una carga de 981 N:
+          </p>
+          <div class="math my-2">
+            $$ F = 981 \text{ N} $$
+          </div>
+          <p>
+            El área de la sección transversal del tornillo se calcula como:
+          </p>
+          <div class="math my-2">
+            $$ A = \frac{\pi}{4} d^2 = \frac{\pi}{4} (30 \text{ mm})^2 = 706.86 \text{ mm}^2 $$
+          </div>
+          <p>
+            El esfuerzo axial resultante es:
+          </p>
+          <div class="math my-2">
+            $$ \sigma = \frac{F}{A} = \frac{981}{706.86} = 1.39 \text{ MPa} $$
+          </div>
+          <p>
+            Dado que este valor es bajo, pero el entorno industrial puede exponerlo a químicos y humedad, se selecciona <strong>acero inoxidable AISI 316</strong>, que posee una resistencia a fluencia superior a 200-300 MPa, garantizando su resistencia en esta aplicación.
+          </p>
+          <div class="text-center my-3">
+            <img src="https://github.com/user-attachments/assets/e07e9394-2c72-4fdd-9254-c7a3aaecb69e" alt="Acero inoxidable AISI 316" class="img-fluid">
+          </div>
+          <p>
+            Para la extracción de las piezas, se opta por una <strong>pinza neumática</strong>.
+          </p>
+          <div class="text-center my-3">
+            <img src="https://github.com/user-attachments/assets/f50d2a13-6d55-46e2-b6f7-5e86100503ac" alt="Pinza neumática" class="img-fluid">
+          </div>
+          <ul>
+            <li><strong>Estación de herramientas:</strong> Permite el intercambio de herramientas de forma precisa sin intervención humana. Se implementa un sistema basado en el diseñado por Jorge Yagüez Aparicio en la Universidad Carlos III.</li>
+          </ul>
+          <p>
+            Como síntesis de lo anterior, se muestra la tabla de componentes de la celda:
+          </p>
+          <div class="table-responsive my-3">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Cantidad</th>
+                  <th>Componente</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Robot Industrial</strong> - ABB IRB 6700 300-270</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Controlador</strong> - ABB IRC5 u OmniCore</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Inyectora</strong> - 370 E GOLDEN ELECTRIC 2</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>Banda Transportadora</strong> - Conveyor 950 4000 h2</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Alimentador de Polímero</strong> - Powder Auger Feeder 4</td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                  <td><strong>Barreras de Seguridad</strong> - Vallado Serie 2000 de FERAX</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>Escáner Láser</strong> - SICK S3000 Advance</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>Paro de Emergencia</strong> - ABB Jokab Safety E-Stop SFC-EB3A</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><strong>PLC de Seguridad</strong> - ABB Jokab Pluto S20 v2</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Software de Seguridad</strong> - ABB SafeMove2</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><strong>Sistema de Señalización</strong> - Patlite Signal Tower LR6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!-- Duty Cycle y Throughput Time -->
+          <h4 id="duty-cycle-y-throughput-time">Duty Cycle y Throughput Time</h4>
+          <p>
+            En la plataforma de RobotStudio se cronometró el tiempo para la rutina de cambio de moldes y para la extracción de la pieza de la inyectora. En el caso de extracción de piezas, se obtuvo el siguiente duty cycle:
+          </p>
+          <div class="table-responsive my-3">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Rutina</th>
+                  <th>Duty Cycle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Extracción</td>
+                  <td>10.9 s</td>
+                </tr>
+                <tr>
+                  <td>Cambio de Moldes</td>
+                  <td>52.0 s</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <hr>
+  
+          <!-- Agregación de Valor de la Celda Robotizada -->
+          <h3 id="agregación-de-valor-de-la-celda-robotizada">Agregación de Valor de la Celda Robotizada</h3>
+          <ul>
+            <li><em>Reducción de tiempos de inactividad:</em> La automatización del cambio de moldes disminuye el tiempo de configuración de <strong>2-3 horas a 1 minuto</strong>, aumentando la disponibilidad de la inyectora y eliminando retrasos en la producción.</li>
+            <li><em>Optimización del consumo energético:</em> La consolidación de inyectoras permite operar con una menor cantidad de equipos, <strong>reduciendo significativamente el consumo eléctrico</strong> y los costos de mantenimiento asociados.</li>
+            <li><em>Incremento en la eficiencia operativa:</em> La extracción automatizada de piezas y la reducción de tiempos de ciclo permiten producir un mayor número de juguetes por día, <strong>eliminando cuellos de botella y mejorando la planificación de producción</strong>.</li>
+            <li><strong>Disminución de desperdicios y reprocesos:</strong> La precisión del robot en la manipulación de moldes y piezas <strong>minimiza errores en la inyección</strong>, reduciendo pérdidas por defectos y optimizando el uso del material.</li>
+          </ul>
+  
+          <hr>
+  
+          <!-- Identificación de Peligros y Gestión de Riesgos -->
+          <h3 id="identificación-de-peligros-y-gestión-de-riesgos">Identificación de Peligros y Gestión de Riesgos</h3>
+          <p>
+            Con la lectura y revisión del Apéndice A de la norma ISO 10218-1:2011, se identificaron los siguientes riesgos en la celda.
+          </p>
+          <h4 id="riesgos-presentes">Riesgos Presentes</h4>
+          <ul>
+            <li>Contacto accidental con el robot.</li>
+            <li>Fallo en la función de paro de seguridad.</li>
+            <li>Caída del molde.</li>
+            <li>Colisión del robot con la inyectora.</li>
+            <li>Exposición a temperaturas extremas y material fundido.</li>
+            <li>Pinzamiento en el manipulador del robot.</li>
+            <li>Fallo en el sistema de control de seguridad.</li>
+            <li>Liberación accidental de los frenos del robot.</li>
+            <li>Manipulación inadecuada del equipo en mantenimiento.</li>
+            <li>Atrapamiento en las bandas transportadoras.</li>
+          </ul>
+          <h4 id="medidas-de-mitigación">Medidas de Mitigación</h4>
+          <ul>
+            <li>Instalación de <strong>barreras físicas y sensores de seguridad</strong>.</li>
+            <li>Implementación de <strong>sistemas de paro de emergencia</strong>.</li>
+            <li>Mantenimiento preventivo en sistemas de fijación y frenos.</li>
+            <li>Capacitación del personal en protocolos de seguridad.</li>
+          </ul>
+  
+          <!-- Frecuencia y Probabilidad de los Peligros -->
+          <h3 id="frecuencia-y-probabilidad-de-los-peligros">Frecuencia y Probabilidad de los Peligros</h3>
+          <p>
+            Para la estimación de riesgos, se utilizó el puntaje <strong>HRN</strong>. Muchos de los componentes ya están diseñados para prevenir estos riesgos. Por ejemplo, la cortina láser desactiva el manipulador cuando detecta el ingreso de personal a la celda, evitando lesiones o accidentes fatales.
+          </p>
+          <h4 id="evaluación-de-riesgos-hrn">Evaluación de Riesgos HRN</h4>
+          <div class="table-responsive my-3">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Riesgo</th>
+                  <th>Probabilidad</th>
+                  <th>Severidad</th>
+                  <th>HRN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Contacto accidental con el robot</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>Fallo en la función de paro de seguridad</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Caída del molde</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>Colisión del robot con la inyectora</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Exposición a temperaturas cambiantes y material fundido</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Pinzamiento entre la caja y el manipulador del robot</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Fallo en el sistema de control de seguridad</td>
+                  <td>1</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Liberación de los frenos del robot</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Manipulación inadecuada del equipo durante el mantenimiento</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Atrapamiento en las bandas transportadoras</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <hr>
+  
+          <!-- Escala de Probabilidad (P) -->
+          <h3 id="escala-de-probabilidad-p">Escala de Probabilidad (P)</h3>
+          <div class="table-responsive my-3">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Valor</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Muy baja – Ocurre en condiciones excepcionales.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Baja – Posible en circunstancias poco frecuentes.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Media – Puede ocurrir ocasionalmente.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Alta – Probable en operación normal.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Muy alta – Casi seguro que ocurrirá en operación normal.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <hr>
+  
+          <!-- Escala de Severidad (S) -->
+          <h3 id="escala-de-severidad-s">Escala de Severidad (S)</h3>
+          <div class="table-responsive my-3">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Valor</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Insignificante – Sin consecuencias o solo molestias menores.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Leve – Daños leves, sin incapacidad significativa.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Moderado – Lesiones tratables, incapacidad temporal.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Grave – Lesiones serias, posible incapacidad permanente.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Catastrófico – Muerte o lesiones irreversibles.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <hr>
+  
+          <!-- Clasificación del Nivel de Riesgo (HRN) -->
+          <h3 id="clasificación-del-nivel-de-riesgo-hrn">Clasificación del Nivel de Riesgo (HRN)</h3>
+          <div class="table-responsive my-3">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Puntaje HRN</th>
+                  <th>Nivel de Riesgo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 - 4</td>
+                  <td>Bajo – No requiere medidas especiales más allá de la supervisión operativa.</td>
+                </tr>
+                <tr>
+                  <td>5 - 9</td>
+                  <td>Moderado – Se recomienda implementar medidas de mitigación y supervisión.</td>
+                </tr>
+                <tr>
+                  <td>10 - 15</td>
+                  <td>Alto – Es obligatorio implementar medidas de seguridad estrictas.</td>
+                </tr>
+                <tr>
+                  <td>16 - 25</td>
+                  <td>Crítico – Riesgo inaceptable, es necesario rediseñar la celda o el proceso.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <hr>
+  
+          <!-- Mitigación de los Peligros -->
+          <h3 id="mitigación-de-los-peligros">Mitigación de los Peligros</h3>
+          <p>
+            Se debe determinar cuáles riesgos requieren la incorporación de componentes de seguridad y cuáles pueden mitigarse mediante manuales, entrenamiento y el uso de Equipos de Protección Personal (EPP).
+          </p>
+          <h4 id="1-contacto-accidental-con-el-robot">1. Contacto accidental con el robot</h4>
+          <ul>
+            <li>Incorporar dispositivos de detección, como escáneres láser y cortinas de luz.</li>
+            <li>Instalar barreras físicas o protecciones móviles en el área de trabajo.</li>
+            <li>Establecer procedimientos de capacitación y uso de EPP para los operarios.</li>
+          </ul>
+          <h4 id="2-fallo-en-la-función-de-paro-de-seguridad">2. Fallo en la función de paro de seguridad</h4>
+          <ul>
+            <li>Utilizar relés de seguridad redundantes.</li>
+            <li>Realizar mantenimientos preventivos y pruebas periódicas del sistema de paro.</li>
+            <li>Asegurar la integración y verificación continua del sistema de seguridad en el controlador.</li>
+          </ul>
+          <h4 id="3-caída-del-molde">3. Caída del molde</h4>
+          <ul>
+            <li>Emplear dispositivos de sujeción robustos (abrazaderas o sistemas de fijación específicos).</li>
+            <li>Integrar sensores de posición que confirmen la sujeción correcta antes de iniciar movimientos.</li>
+          </ul>
+          <h4 id="4-colisión-del-robot-con-la-inyectora">4. Colisión del robot con la inyectora</h4>
+          <ul>
+            <li>Establecer límites programados de seguridad y zonas restringidas mediante SafeMove2.</li>
+            <li>Instalar barreras físicas y sensores de proximidad para prevenir acercamientos peligrosos.</li>
+            <li>Realizar simulaciones en RobotStudio para validar las trayectorias.</li>
+          </ul>
+          <h4 id="5-exposición-a-temperaturas-cambiantes-y-a-material-fundido-de-la-inyectora">5. Exposición a temperaturas cambiantes y a material fundido de la inyectora</h4>
+          <ul>
+            <li>Proveer barreras térmicas y señalización que advierta sobre zonas calientes.</li>
+            <li>Suministrar EPP específico (guantes resistentes al calor, protección facial, ropa térmica) en caso de que se necesite entrar a la celda.</li>
+          </ul>
+          <h4 id="6-pinzamiento-entre-los-moldes-y-el-manipulador-del-robot">6. Pinzamiento entre los moldes y el manipulador del robot</h4>
+          <ul>
+            <li>Establecer controles de acceso y paros de emergencia específicos.</li>
+            <li>Integrar sensores de colisión en áreas de posible impacto para detener el proceso.</li>
+          </ul>
+          <h4 id="7-fallo-en-el-sistema-de-control-de-seguridad">7. Fallo en el sistema de control de seguridad</h4>
+          <ul>
+            <li>Emplear un PLC de seguridad redundante.</li>
+            <li>Realizar pruebas de diagnóstico en tiempo real y mantenimiento preventivo.</li>
+            <li>Incluir simulaciones en RobotStudio para validar el sistema antes de su operación.</li>
+          </ul>
+          <h4 id="8-liberación-de-los-frenos-del-robot">8. Liberación de los frenos del robot</h4>
+          <ul>
+            <li>Incorporar un sistema de frenos redundante y realizar inspecciones periódicas.</li>
+            <li>Asegurar procedimientos de puesta en marcha y verificación antes de iniciar operaciones.</li>
+            <li>Capacitar al personal de mantenimiento en la operación y verificación de los frenos.</li>
+          </ul>
+          <h4 id="9-manipulación-inadecuada-del-equipo-durante-el-mantenimiento">9. Manipulación inadecuada del equipo durante el mantenimiento</h4>
+          <ul>
+            <li>Desarrollar y seguir procedimientos de mantenimiento estandarizados.</li>
+            <li>Proveer entrenamiento regular y el uso de EPP adecuado (guantes, protección ocular y ropa de seguridad).</li>
+            <li>Implementar supervisión en las actividades de mantenimiento.</li>
+          </ul>
+          <h4 id="10-atrapamiento-en-las-bandas-transportadoras">10. Atrapamiento en las bandas transportadoras</h4>
+          <ul>
+            <li>Instalar protecciones fijas y móviles en las bandas transportadoras.</li>
+            <li>Integrar sensores de seguridad y paros de emergencia en la línea de producción.</li>
+          </ul>
+  
+          <hr>
+  
+          <hr>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </section>
+  

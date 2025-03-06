@@ -11,16 +11,10 @@
 # -----------------
 en: &DEFAULT_EN
   nav:
-    - title: "Services"
-      section: services
-    - title: "Portfolio"
+    - title: "Productos"
       section: portfolio
-    - title: "About"
-      section: about
-    - title: "Team"
+    - title: "Equipo"
       section: team
-    - title: "Theme Source"
-      url: https://github.com/raviriley/agency-jekyll-theme/
   dropdown_nav:
     - title: "Planeación de proyecto"
       section: 01Plan
@@ -38,7 +32,6 @@ en: &DEFAULT_EN
       section: 07Controladores
     - title: "SCADA"
       section: 08SCADA
-      
 en-US:
   <<: *DEFAULT_EN
 en-CA:

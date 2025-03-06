@@ -1,9 +1,677 @@
-<section class="page-section" id="gestion">
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 - Gestión con Software de Simulación de Planta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Section 02 -->
+  <section class="bg-light page-section" id="02Gestion">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext.plan.title | markdownify | default: "Gestión" }}</h2>
+        <div class="col-lg-12">
+          <!-- Título principal -->
+          <h1>1. Análisis con Software de Simulación de Planta</h1>
+          <p>
+            En el marco de la mejora continua de los procesos productivos, el <strong>departamento de ingeniería</strong> de la empresa <strong>Los Juguetes Hermanos</strong> ha desarrollado un plan estratégico para la <strong>optimización de su planta de fabricación</strong>. Como primer paso, se llevó a cabo la <strong>modelación del estado actual</strong> de la fábrica en la herramienta de Tecnomatix, identificando ineficiencias y oportunidades de mejora en el flujo de producción.
+          </p>
+          
+          <!-- Modelo de la Situación Inicial -->
+          <h2>Modelo de la Situación Inicial</h2>
+          <p>
+            El siguiente esquema representa la <strong>distribución actual</strong> de la planta de producción:
+          </p>
+          <img src="https://github.com/user-attachments/assets/94e5c501-7bcf-4125-b52f-7952c0f46ce6" alt="Distribución actual de la planta">
+          <img src="https://github.com/user-attachments/assets/f17ffe6e-eaa4-4032-9865-bc40e58f6232" alt="Distribución actual de la planta 2">
+          
+          <!-- Problemas Identificados -->
+          <h3>Problemas Identificados:</h3>
+          <ul>
+            <li><strong>Cuellos de botella</strong> en múltiples etapas del proceso.</li>
+            <li><strong>Flujo de producción segmentado</strong>, dificultando la integración de las líneas.</li>
+            <li><strong>Aprovechamiento ineficiente del espacio en planta</strong>.</li>
+            <li><strong>Alto consumo energético</strong> debido a la operación simultánea de múltiples inyectoras con baja ocupación.</li>
+            <li><strong>Tiempos de espera prolongados</strong>, afectando la eficiencia global del sistema.</li>
+          </ul>
+          
+          <p>
+            A continuación, se presenta el desempeño en cada línea de producción:
+          </p>
+          
+          <!-- Línea Propulser -->
+          <h4>Línea Propulser</h4>
+          <img src="https://github.com/user-attachments/assets/756f2518-0811-4d79-a455-df19b27415b9" alt="Línea Propulser">
+          
+          <h5>Información General</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">UNIDADES</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. DISPONIBLE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. OPTVO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">17</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">28800</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">28644</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,93</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h5>Procesos: Propulser</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">PROCESO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">REGISTRO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">INYECCIÓN</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">M. CHASIS</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">M. MOTOR</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">M. VIDRIOS</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">DESPACHO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DE CICLO</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">300</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">30</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">5</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">180</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">120</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DISPONIBLE</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">23040</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">18720</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">27360</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">27360</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">27360</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">24480</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">27360</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>DISPONIBILIDAD</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,8</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,65</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,95</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,95</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,95</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,95</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h5>Métricas Finales</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">DISPONIBILIDAD</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">EFICIENCIA</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">FFT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,8833</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,3615</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,93</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>Esto deja a la línea con un desastroso OEE de 29%.</p>
+          
+          <!-- Línea Qammar -->
+          <h4>Línea Qammar</h4>
+          <img src="https://github.com/user-attachments/assets/100794fd-9ea0-4609-8bc1-84bdcd18393f" alt="Línea Qammar">
+          
+          <h5>Información General</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">UNIDADES</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. DISPONIBLE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. OPTVO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">22</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">28800</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">28644</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,95</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h5>Procesos: Qammar</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">PROCESO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">REGISTRO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CORTE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD 1</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">PINTURADO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">ENSAMBLE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD 2</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">E. INDIVIDUAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DE CICLO</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">60</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">210</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DISPONIBLE</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">25920</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">23040</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">25920</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">24480</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">21600</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">24480</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">25920</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>DISPONIBILIDAD</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,90</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,80</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,90</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,75</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,90</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h5>Métricas Finales</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">DISPONIBILIDAD</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">EFICIENCIA</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">FFT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,2335</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,95</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>Con ello se calcula que esta línea de producción tiene un OEE del 18%.</p>
+          
+          <!-- Línea TDB -->
+          <h4>Línea TDB (Trompo de Batalla)</h4>
+          <img src="https://github.com/user-attachments/assets/0b687d7e-c53a-4df3-a2c2-3234b70452f4" alt="Línea TDB (Trompo de Batalla)">
+          
+          <h5>Información General</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">UNIDADES</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. DISPONIBLE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. OPTVO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">232</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">28800</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">28644</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h5>Procesos: TDB</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">PROCESO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">REGISTRO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">INYECCIÓN</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">FUNDICIÓN</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">TROQUELADO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">PINTURADO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">ENSAMBLAJE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">DESPACHO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DE CICLO</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">3</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">5</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">1</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">2</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">5</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">15</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DISPONIBLE</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">23040</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">24480</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">27360</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">27936</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">24480</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">20160</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">25920</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">24480</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>DISPONIBILIDAD</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,8</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,95</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,97</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,7</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,9</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h5>Métricas Finales</h5>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">DISPONIBILIDAD</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">EFICIENCIA</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">FFT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85875</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,3511</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0,85</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>Presentando un OEE de 25%.</p>
+          
+          <!-- Propuesta de Optimización del Layout -->
+          <h2>Propuesta de Optimización del Layout</h2>
+          <p>
+            Tras un análisis detallado de múltiples alternativas, se seleccionó el siguiente <strong>diseño optimizado de la planta</strong>, el cual maximiza el flujo productivo y reduce desperdicios:
+          </p>
+          <img src="https://github.com/user-attachments/assets/769a7ceb-fe93-4d3e-b698-bd3d02912cce" alt="Diseño optimizado de la planta">
+          <img src="https://github.com/user-attachments/assets/6ed93f23-6cf3-4709-b643-ca7078fc1a48" alt="Diseño optimizado de la planta 2">
+          
+          <h3>Beneficios del Nuevo Diseño:</h3>
+          <ul>
+            <li><strong>Integración de las líneas de producción</strong>, eliminando restricciones de flujo.</li>
+            <li><strong>Reducción de tiempos de espera y transporte de materiales</strong>.</li>
+            <li><strong>Mayor flexibilidad</strong> para la fabricación de distintos modelos de juguetes con cambios mínimos en el sistema.</li>
+            <li><strong>Optimización del consumo energético</strong>, consolidando el uso de equipos.</li>
+            <li><strong>Automatización del cambio de moldes</strong>, permitiendo mayor eficiencia en la inyectora principal.</li>
+          </ul>
+          
+          <!-- Desempeño del Nuevo Sistema -->
+          <h2>Desempeño del Nuevo Sistema</h2>
+          <p>
+            El siguiente gráfico presenta el desempeño alcanzado tras la optimización:
+          </p>
+          <img src="https://github.com/user-attachments/assets/2a1623c8-997c-48ac-b41a-797bcfe796aa" alt="Desempeño del Nuevo Sistema">
+          
+          <h3>Tiempo de procesamiento por operación</h3>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Proceso</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Tiempo (minutos)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Registro</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0:10</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Inyección</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0:11</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Lijado</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">1:30</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Desbarbado</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">1:00</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Pintado</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">1:20</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Ensamblaje</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">3:00</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Empaque Individual</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0:21</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Empaque por Lotes</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">3:30</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h3>MTTR por proceso</h3>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Proceso</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Disponibilidad</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">MTTR (mm:ss)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Inyección</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">95%</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">1:00</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Lijado</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">90%</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0:10</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Desbarbado</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">95%</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0:30</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Pintado</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">95%</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0:30</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Ensamblaje</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">85%</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0:10</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Empaque Individual</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">90%</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">1:00</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">Empaque por Lotes</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">95%</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">1:00</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h3>Consideraciones diarias de la planta</h3>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">UNIDADES</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. DISPONIBLE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">T. OPTVO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CALIDAD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">640</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">57600</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">57444</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.95</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h3>Información detallada del proceso</h3>
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">PROCESO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">REGISTRO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">INYECCIÓN</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">LIJADO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">DESBARBADO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">PINTADO</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">ENSAMBLAJE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">E. INDIVIDUAL</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">E. LOTES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DE CICLO (s)</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">10</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">11</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">90</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">60</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">80</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">180</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">21</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">210</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>T. DISPONIBLE (s)</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">51840</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">54720</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">51840</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">54720</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">54720</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">48960</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">51840</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">54720</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;"><strong>DISPONIBILIDAD</strong></td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.90</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.95</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.90</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.95</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.95</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.85</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.90</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.95</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h3>Ecuaciones y Cálculo del OEE</h3>
+          <p>Con las siguientes ecuaciones:</p>
+          <p>
+            <img src="https://github.com/user-attachments/assets/257c9de8-171f-490b-b41b-4e3093b749f4" alt="Ecuación 1">
+          </p>
+          <p>
+            <img src="https://github.com/user-attachments/assets/7d1bdea3-95be-4e48-834b-da892a2c82b0" alt="Ecuación 2">
+          </p>
+          <p>
+            <img src="https://github.com/user-attachments/assets/5dfb9163-9b41-46dc-9f4c-175b50f9740b" alt="Ecuación 3">
+          </p>
+          <p>Reemplazando los datos de la tabla de consideraciones generales tenemos que:</p>
+          
+          <table style="width:100%; border-collapse: collapse; font-family: sans-serif;">
+            <thead style="background-color: #f2f2f2;">
+              <tr>
+                <th style="border: 1px solid #dddddd; padding: 8px;">MÉTRICA</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">VALOR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">DISPONIBILIDAD</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.92</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">EFICIENCIA</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.875844301</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">FTT</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">0.95</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>
+            Con los datos de la tabla anterior, se puede hacer el cálculo del OEE de la propuesta de mejora de automatización, de esta forma, reemplazando en la ecuación:
+          </p>
+          <p>
+            <img src="https://github.com/user-attachments/assets/44626dc9-6682-4d1b-8831-335584504c41" alt="Ecuación OEE">
+          </p>
+          <p>
+            Con ello, obtenemos que el OEE de la actualización es de 76%, lo cual es una mejora significativa partiendo de la situación inicial que tenía la empresa. Con esta distribución se alcanza una producción de 640 unidades diarias repartidas entre los juguetes del catálogo. La mayor o menor producción de uno u otro dependerá de la demanda del mercado en el momento de producción.
+          </p>
+          <!-- VSM del proceso -->
+          <h2>VSM del proceso actual y el mejorado</h2>
+          <p>
+            El proceso actual de la empresa presenta el siguiente Value Stream Mapping:
+          </p>
+          <p>
+            <img src="https://github.com/user-attachments/assets/3715923b-83b5-4056-9ce9-cce61668e519" alt="VSM proceso actual">
+          </p>
+          <p>
+            Entre los problemas que presenta esta distribución se encuentran:
+          </p>
+          <ul>
+            <li><strong>Excesivos tiempos de transporte:</strong> Varios bloques de transporte con valores de 5 a 10 minutos, lo que indica potencial de mejora.</li>
+            <li><strong>Cuellos de botella:</strong> Diferencias notables entre algunos procesos (por ejemplo, empacado y fundición) donde la mayoría dura menos de 3 minutos.</li>
+            <li><strong>Acumulación de materia prima:</strong> Uso de lotes que conlleva acumulación de materia prima y de producto en proceso (se acumulan 2 lotes antes del empacado).</li>
+            <li><strong>Elevados tiempos de configuración:</strong> Por ejemplo, en la inyección de plásticos, el ciclo es de 3 minutos frente a 15 minutos de preparación; de igual forma, el empacado se prepara durante 10 minutos antes de operar por 15 minutos.</li>
+          </ul>
+          <p>
+            Por otro lado, este es el VSM correspondiente al proceso mejorado de la planta:
+          </p>
+          <p>
+            <img src="https://github.com/user-attachments/assets/5ab98fe0-0e33-49c8-b955-2e0eb3fc23f2" style="width: 100%; height: auto; alt="VSM proceso mejorado">
+          </p>
+          <p>
+            En este VSM se evidencia que los tiempos de ciclo son relativamente bajos en la mayoría de procesos, manteniendo órdenes de magnitud similares y presentando un buen porcentaje de disponibilidad (mayor al 85%).
+          </p>
+          <!-- Integración de sistema MES -->
+          <h2>Integración de sistema MES a Los Juguetes Hermanos</h2>
+          
+          <h3>Adquisición de Datos en la Planta</h3>
+          <p>
+            Para optimizar la producción y trazabilidad, se implementará un sistema de adquisición de datos en tiempo real que integrará sensores, PLCs y dispositivos IoT en cada etapa del proceso:
+          </p>
+          <ul>
+            <li><strong>Inyección (Gestionada por el IRB 6700):</strong>
+              <ul>
+                <li>Sensores de presión y temperatura en la inyectora.</li>
+                <li>Contadores de ciclos de moldeo y tiempo de inactividad.</li>
+                <li>Comunicación OPC UA con el MES.</li>
+              </ul>
+            </li>
+            <li><strong>Desbarbado Criogénico:</strong>
+              <ul>
+                <li>Monitoreo de temperatura en la cámara de congelación de la máquina.</li>
+                <li>Registro de tiempos de exposición por lote.</li>
+                <li>Control de consumo de nitrógeno líquido.</li>
+              </ul>
+            </li>
+            <li><strong>Lijado y Ensamblaje:</strong>
+              <ul>
+                <li>Escaneo de códigos de barras o RFID al inicio y fin de cada tarea.</li>
+                <li>Registro de tiempos operativos mediante tablets IoT.</li>
+                <li>Inspección visual con visión artificial en puntos clave.</li>
+              </ul>
+            </li>
+            <li><strong>Empacado individual y por lotes:</strong>
+              <ul>
+                <li>Pesaje de productos terminados para control de calidad.</li>
+                <li>Registro de lotes mediante código QR.</li>
+              </ul>
+            </li>
+          </ul>
+          
+          <hr>
+          
+          <h3>Infraestructura de Control y Comunicación</h3>
+          <p>
+            Para garantizar la integración fluida entre la planta y el MES, se utilizará una arquitectura basada en:
+          </p>
+          <ul>
+            <li><strong>PLCs industriales conectados a un SCADA</strong>, con almacenamiento en bases de datos SQL.</li>
+            <li><strong>Middleware basado en Node-RED o Kepware</strong>, actuando como puente con el MES.</li>
+            <li><strong>Protocolos de comunicación estandarizados</strong>: OPC UA, MQTT y REST API.</li>
+          </ul>
+          
+          <h3>Implementación y Desarrollo</h3>
+          <p>
+            La integración con el MES se realizará en <strong>etapas</strong> distribuidas a lo largo de 8 meses para minimizar interrupciones en la producción:
+          </p>
+          <ol>
+            <li><strong>Configuración de Sensores y PLCs (Meses 1-3):</strong>
+              <ul>
+                <li>Instalación y calibración de sensores en inyectoras y cámaras criogénicas.</li>
+                <li>Desarrollo del sistema de registro en lijado y ensamblaje.</li>
+              </ul>
+            </li>
+            <li><strong>Desarrollo de Middleware y Conexión con MES (Meses 4-6):</strong>
+              <ul>
+                <li>Creación de APIs para transmisión de datos.</li>
+                <li>Configuración de dashboards de productividad y calidad.</li>
+              </ul>
+            </li>
+            <li><strong>Optimización y Validación (Meses 7-8):</strong>
+              <ul>
+                <li>Pruebas de precisión de datos y ajuste de alarmas.</li>
+                <li>Capacitación del personal en el uso del sistema.</li>
+              </ul>
+            </li>
+          </ol>
+          
+          <hr>
+          
+          <h3>Valor Agregado y Beneficios Esperados</h3>
+          <ul>
+            <li><strong>Aumento del OEE:</strong> Obtención de datos de eficiencia, disponibilidad y calidad que permiten identificar cuellos de botella y áreas de mejora.</li>
+            <li><strong>Reducción de tiempos de inactividad:</strong> Anticipación de fallas y programación de mantenimientos preventivos.</li>
+            <li><strong>Trazabilidad total:</strong> Desde la recepción del material hasta el empaque.</li>
+            <li><strong>Ajuste en tiempo real de la producción:</strong> Control sobre la cantidad de unidades a producir según la demanda.</li>
+            <li><strong>Toma de decisiones:</strong> Basada en información precisa y actualizada, con generación de informes detallados.</li>
+            <li><strong>Cumplimiento normativo:</strong> Documentación y trazabilidad que aseguran el cumplimiento de normas de seguridad.</li>
+          </ul>
+          
         </div>
       </div>
     </div>
   </section>
+  <!-- End Section 02 -->
+  
+</body>
+</html>

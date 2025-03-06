@@ -14,7 +14,7 @@
 theme: jekyll-agency
 
 url: "https://cvarper.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: #"/Los-Juguetes-Hermanos" # the subpath of your site, e.g. /blog
+baseurl: "/Los-Juguetes-Hermanos" # the subpath of your site, e.g. /blog
 
 title      : Los Juguetes hermanos
 email      : your-email@example.com #this is also the email contact forms will go to

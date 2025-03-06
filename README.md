@@ -25,3 +25,7 @@ A continuación, se presenta la tabla de contenido del proyecto, organizada por 
 -------------
 ## Enlace de acceso a la página web del proyecto: 
 [Los Juguetes Hermanos](https://cvarper.github.io/Los-Juguetes-Hermanos/)
+
+https://youtu.be/wqRiye1aO-A
+## Enlace presentación video del proyecto: 
+[Los Juguetes Hermanos video YouTube](https://youtu.be/wqRiye1aO-A)
